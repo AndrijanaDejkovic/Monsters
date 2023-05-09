@@ -7,14 +7,14 @@ using Cudovista.Entiteti;
 
  namespace Cudovista.Mapiranja
 {
-    public class Magisjke_sposobnostiMapiranja : SubclassMap<Magijske_sposobnosti>
+    public class Magisjke_sposobnostiMapiranja : ClassMap<Magijske_sposobnosti>
     {
 
         public Magisjke_sposobnostiMapiranja()
         {
             Table("Magijske_sposobnosti");
 
-            KeyColumn("Id");
+            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
 
             Map(x => x.Naziv_sposobnosti).Column("Naziv_sposobnosti");
             Map(x => x.Da_li_je_odbrambena).Column("Da_li_je_odbrambena");

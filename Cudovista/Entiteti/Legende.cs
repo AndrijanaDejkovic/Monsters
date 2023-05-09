@@ -12,5 +12,7 @@ namespace Cudovista.Entiteti
         public virtual string Tekst { get; set; }
         public virtual DateTime Prvo_pominjanje { get; set; }
         public virtual string Zemlja_porekla { get; set; }
+        public virtual Cudoviste PropadaCudovistu { get; set; } //vidi jel dobro ovo ime
+
     }
 }

@@ -7,13 +7,13 @@ using Cudovista.Entiteti;
 
  namespace Cudovista.Mapiranja
 {
-    public class LovciMapiranja : SubclassMap<Lovci>
+    public class LovciMapiranja : ClassMap<Lovci>
     {
         public LovciMapiranja()
         {
             Table("Lovci");
 
-            KeyColumn("Id");
+            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
 
             Map(x => x.Ime_lovca).Column("Ime_lovca");
         }

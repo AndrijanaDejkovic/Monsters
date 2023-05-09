@@ -13,5 +13,7 @@ namespace Cudovista.Entiteti
         public virtual int Starost { get; set; }
         public virtual DateTime Datum_susreta { get; set; }
         public virtual string Ishod { get; set; }
+        public virtual Cudoviste PropadaCudovistu { get; set; }
+
     }
 }

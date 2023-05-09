@@ -12,6 +12,7 @@ namespace Cudovista.Entiteti
         public virtual string Naziv_protivmere { get; set; }
         public virtual string Opis_protivmere { get; set; }
         public virtual int Da_li_uslovi { get; set; }
+        public virtual Cudoviste PropadaCudovistu { get; set; }
 
     }
 }

@@ -7,13 +7,13 @@ using Cudovista.Entiteti;
 
 namespace Cudovista.Mapiranja
 {
-    public class BajaliceMapiranja : SubclassMap<Bajalice>
+    public class BajaliceMapiranja : ClassMap<Bajalice>
     {
         public BajaliceMapiranja()
         {
             Table("Bajalice");
 
-            KeyColumn("Bajalica");
+            //KeyColumn("Bajalica");
 
             Map(x => x.Bajalica).Column("Bajalica");
         }

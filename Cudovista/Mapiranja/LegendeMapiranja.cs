@@ -7,17 +7,20 @@ using Cudovista.Entiteti;
 
  namespace Cudovista.Mapiranja
 {
-    public class LegendeMapiranja : SubclassMap<Legende>
+    public class LegendeMapiranja : ClassMap<Legende>
     {
         public LegendeMapiranja()
         {
             Table("Legende");
 
-            KeyColumn("Id");
+            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
 
             Map(x => x.Tekst).Column("Tekst");
             Map(x => x.Prvo_pominjanje).Column("Prvo_pominjanje");
             Map(x => x.Zemlja_porekla).Column("Zemlja_porekla");
+
+            //mapiranje veze 1:N Cudoviste-Legende
+            References(x => x.PropadaCudovistu).Column("ID_Cudovista").LazyLoad();
 
         }
     }

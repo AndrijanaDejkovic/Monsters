@@ -7,13 +7,13 @@ using Cudovista.Entiteti;
 
 namespace Cudovista.Mapiranja
 {
-    public class LokacijaMapiranja : SubclassMap<Lokacija>
+    public class LokacijaMapiranja : ClassMap<Lokacija>
     {
         public LokacijaMapiranja()
         {
             Table("Lokacija");
 
-            KeyColumn("Id");
+            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
 
             Map(x => x.Naziv_lokacije).Column("Naziv_lokacije");
             Map(x => x.Tip_lokacije).Column("Tip_lokacije");

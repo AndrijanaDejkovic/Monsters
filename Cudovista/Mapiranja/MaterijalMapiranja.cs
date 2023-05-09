@@ -8,16 +8,15 @@ using Cudovista.Entiteti;
  namespace Cudovista.Mapiranja
 {
    
-    public class MaterijalMapiranja : SubclassMap<Materijal>
+    public class MaterijalMapiranja : ClassMap<Materijal>
     {
         public MaterijalMapiranja()
         {
 
             Table("Materijal");
 
-            KeyColumn("Id");
+            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Tip_materijala).Column("Tip_materijala");
         }
     }
 }

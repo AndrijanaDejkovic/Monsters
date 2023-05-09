@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cudovista.Entiteti
 {
-    public class Magijsko_cudoviste
+    public class Magijsko_cudoviste : Cudoviste
     {
         public virtual int Id { get; set; }
         public virtual int Da_li_postoji { get; set; }

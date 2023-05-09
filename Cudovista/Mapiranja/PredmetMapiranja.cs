@@ -7,15 +7,17 @@ using Cudovista.Entiteti;
 
  namespace Cudovista.Mapiranja
 {
-    public class PredmetMapiranja : SubclassMap<Predmet>
+    public class PredmetMapiranja : ClassMap<Predmet>
     {
         public PredmetMapiranja()
         {
             Table("Predmet");
 
-            KeyColumn("Id");
+            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Tip_predmeta).Column("Tip_predmeta");
+            //mapiranje veze 1:N Cudoviste-Predmet
+            References(x => x.PropadaCudovistu).Column("ID_Cudovista").LazyLoad();
+
         }
     }
 

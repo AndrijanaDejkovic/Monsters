@@ -7,13 +7,13 @@ using Cudovista.Entiteti;
 
  namespace Cudovista.Mapiranja
 {
-    public class Specijalne_sposobnostiMapiranja : SubclassMap<Specijalne_sposobnosti>
+    public class Specijalne_sposobnostiMapiranja : ClassMap<Specijalne_sposobnosti>
     {
         public Specijalne_sposobnostiMapiranja()
         {
             Table("Specijalne_sposobnosti");
 
-            KeyColumn("Spec_Sposobnosti"); //ovo se menja ako dodajemo id
+            //KeyColumn("Spec_Sposobnosti"); //treba da se pita aleksandar za id sta da se radi
 
             Map(x => x.Spec_sposobnosti).Column("Spec_sposobnosti");
             //ovo stoji ako dodajemo sposobnosti
