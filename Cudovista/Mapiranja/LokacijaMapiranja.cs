@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +16,7 @@ namespace Cudovista.Mapiranja
             Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
             Map(x => x.Naziv_lokacije).Column("NAZIV_LOKACIJE");
-            /*Map(x => x.tip).Column("Tip_lokacije");*/
+            *//*Map(x => x.tip).Column("Tip_lokacije");*//*
             Map(x => x.Zemlja).Column("ZENLJA");
             Map(x => x.Blago).Column("BLAGO");
 
@@ -69,3 +69,4 @@ namespace Cudovista.Mapiranja
     }
 }
 
+*/

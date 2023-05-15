@@ -13,9 +13,10 @@ namespace Cudovista.Mapiranja
         {
             Table("Bajalice");
 
-            //KeyColumn("Bajalica");
+            Id(x => x.ID, "ID").GeneratedBy.SequenceIdentity();
 
             Map(x => x.Bajalica).Column("Bajalica");
+            References(x => x.Id_cudovista).Column("Id_cudovista").LazyLoad();
         }
     }
 }

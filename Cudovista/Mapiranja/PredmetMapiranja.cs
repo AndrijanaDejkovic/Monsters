@@ -16,8 +16,8 @@ using Cudovista.Entiteti;
             Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
             //mapiranje veze 1:N Cudoviste-Predmet
-            References(x => x.Id_cudovista).Column("ID_PREDMETA").LazyLoad();
-            HasOne(x => x.Id_materijala).Cascade.All();
+            References(x => x.Id_cudovista).Column("Id_cudovista").LazyLoad();
+          //  HasOne(x => x.Id_materijala).Cascade.All();
         }
     }
     class LobanjaMapiranja : SubclassMap<Lobanja>

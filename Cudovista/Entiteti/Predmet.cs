@@ -10,7 +10,7 @@ namespace Cudovista.Entiteti
     {
         public virtual int ID { get; set; }
         public virtual Cudoviste Id_cudovista { get; set; }
-        public Materijal Id_materijala { get; set; }
+       // public Materijal Id_materijala { get; set; }
 
         //public virtual string Tip_predmeta { get; set; }
         //isto kao kod materijala se brise tip

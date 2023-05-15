@@ -14,8 +14,8 @@ namespace Cudovista.Entiteti
         public virtual DateTime Datum_susreta { get; set; }
         public virtual string Ishod { get; set; }
         public virtual Cudoviste Id_cudovista { get; set; }
-        public  virtual Lokacija Id_lokacije { get; set; }
-        public virtual IList<Lovci> Love_ga { get; set; }   
+       // public  virtual Lokacija Id_lokacije { get; set; }
+      //  public virtual IList<Lovci> Love_ga { get; set; }   
 
     }
 }

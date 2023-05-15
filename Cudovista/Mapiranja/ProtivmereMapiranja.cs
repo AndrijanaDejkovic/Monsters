@@ -21,7 +21,7 @@ using Cudovista.Entiteti;
             Map(x => x.Da_li_uslovi).Column("DA_LI_USLOVI");
 
             //mapiranje veze 1:N Cudoviste-Protuvmera
-            References(x => x.Id_cudovista).Column("ID_PROTIVMERE").LazyLoad();
+            References(x => x.Id_cudovista).Column("Id_cudovista").LazyLoad();
 
         }
     }

@@ -21,9 +21,9 @@ using Cudovista.Entiteti;
             Map(x => x.Ishod).Column("ISHOD");
 
             //mapiranje veze 1:N Cudoviste-Predstavnik
-            References(x => x.Id_cudovista).Column("ID_PREDSATVNIKA").LazyLoad();
-            HasOne(x => x.Id_lokacije).Cascade.All();
-            HasMany(x => x.Love_ga).KeyColumn("ID_PREDSATVNIKA").LazyLoad().Cascade.All().Inverse();
+            References(x => x.Id_cudovista).Column("Id_cudovista").LazyLoad();
+         //   HasOne(x => x.Id_lokacije).Cascade.All();
+          //  HasMany(x => x.Love_ga).KeyColumn("Id_predstavnika").LazyLoad().Cascade.All().Inverse();
 
         }
     }

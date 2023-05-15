@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using FluentNHibernate.Mapping;
 using Cudovista.Entiteti;
+using System.Threading.Tasks;
 
 namespace Cudovista.Mapiranja
 {
@@ -14,7 +15,7 @@ namespace Cudovista.Mapiranja
 		{
             Table("CUDOVISTE"); //proveri da li su tabele veliki slovima
 
-            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.SequenceIdentity();
 
             Map(x => x.Vek).Column("VEK");
             Map(x => x.Naziv_cudovista).Column("NAZIV_CUDOVISTA");

@@ -45,7 +45,7 @@ namespace Cudovista
                  
                 return Fluently.Configure()
                     .Database(cfg)
-                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<BajaliceMapiranja>())
+                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<CudovisteMapiranja>())
 
 /*                    .ExposeConfiguration(BuildSchema)*/
                     .BuildSessionFactory();

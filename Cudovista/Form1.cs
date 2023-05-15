@@ -27,7 +27,7 @@ namespace Cudovista
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
                 Cudovista.Entiteti.Cudoviste p = s.Get<Cudovista.Entiteti.Cudoviste>(1);
 
-                MessageBox.Show(p.ID.ToString());
+                MessageBox.Show(p.Naziv_cudovista);
 
                 s.Close();
             }
@@ -39,6 +39,50 @@ namespace Cudovista
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void findNameCudoviste_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                //Ucitavaju se podaci o prodavnici za zadatim brojem
+                Cudovista.Entiteti.Cudoviste p = s.Get<Cudovista.Entiteti.Cudoviste>(1);
+
+                MessageBox.Show(p.Naziv_cudovista);
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+        }
+
+        /*private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                //Ucitavaju se podaci o prodavnici za zadatim brojem
+                Cudovista.Entiteti.Cudoviste p = s.Get<Cudovista.Entiteti.Cudoviste>(1);
+
+                MessageBox.Show(p.Naziv_cudovista);
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+
+        }*/
+
+        /*private void button1_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -56,11 +100,8 @@ namespace Cudovista
                 MessageBox.Show(ec.Message);
             }
 
-        }
-
-        /*private void button1_Click_1(object sender, EventArgs e)
-        {
-
         }*/
+
+
     }
 }

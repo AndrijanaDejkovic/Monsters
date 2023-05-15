@@ -20,7 +20,7 @@ using Cudovista.Entiteti;
             Map(x => x.Zemlja_porekla).Column("ZEMLJA_POREKLA");
 
             //mapiranje veze 1:N Cudoviste-Legende
-            References(x => x.Id_cudovista).Column("ID_CUDOVISTA"); //.LazyLoad();
+            References(x => x.Id_cudovista).Column("Id_cudovista").LazyLoad();
 
         }
     }
