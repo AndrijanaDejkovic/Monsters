@@ -11,11 +11,11 @@ using Cudovista.Entiteti;
     {
         public LovciMapiranja()
         {
-            Table("Lovci");
+            Table("LOVCI");
 
-            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Ime_lovca).Column("Ime_lovca");
+            References(x => x.Id_predstavnika).Column("ID_LOVCA").LazyLoad();
         }
     }
 }

@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace Cudovista.Entiteti
 {
-    public class Predstavnici
+    public class Predstavnik
     {
-        public virtual int Id { get; set; }
+        public virtual int ID { get; set; }
         public virtual string Ime_predstavnika { get; set; }
         public virtual int Starost { get; set; }
         public virtual DateTime Datum_susreta { get; set; }
         public virtual string Ishod { get; set; }
-        public virtual Cudoviste PropadaCudovistu { get; set; }
+        public virtual Cudoviste Id_cudovista { get; set; }
+        public  virtual Lokacija Id_lokacije { get; set; }
+        public virtual IList<Lovci> Love_ga { get; set; }   
 
     }
 }

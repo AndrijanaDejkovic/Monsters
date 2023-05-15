@@ -13,12 +13,39 @@ using Cudovista.Entiteti;
         {
             Table("Predmet");
 
-            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
             //mapiranje veze 1:N Cudoviste-Predmet
-            References(x => x.PropadaCudovistu).Column("ID_Cudovista").LazyLoad();
-
+            References(x => x.Id_cudovista).Column("ID_PREDMETA").LazyLoad();
+            HasOne(x => x.Id_materijala).Cascade.All();
         }
     }
-
+    class LobanjaMapiranja : SubclassMap<Lobanja>
+    {
+        public LobanjaMapiranja()
+        {
+            DiscriminatorValue("Lobanja");
+        }
+    }
+    class KrstMapiranja : SubclassMap<Krst>
+    {
+        public KrstMapiranja()
+        {
+            DiscriminatorValue("Krst");
+        }
+    }
+    class MacMapiranja : SubclassMap<Mac>
+    {
+        public MacMapiranja()
+        {
+            DiscriminatorValue("Mac");
+        }
+    }
+    class KnjigaMapiranja : SubclassMap<Knjiga>
+    {
+        public KnjigaMapiranja()
+        {
+            DiscriminatorValue("Knjiga");
+        }
+    }
 }

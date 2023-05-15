@@ -8,8 +8,9 @@ namespace Cudovista.Entiteti
 {
     public class Predmet
     {
-        public virtual int Id { get; set; }
-        public virtual Cudoviste PropadaCudovistu { get; set; }
+        public virtual int ID { get; set; }
+        public virtual Cudoviste Id_cudovista { get; set; }
+        public Materijal Id_materijala { get; set; }
 
         //public virtual string Tip_predmeta { get; set; }
         //isto kao kod materijala se brise tip
@@ -20,7 +21,7 @@ namespace Cudovista.Entiteti
 
     }
 
-    public class krst : Predmet
+    public class    Krst : Predmet
     {
 
     }

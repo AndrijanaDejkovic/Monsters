@@ -11,11 +11,13 @@ namespace Cudovista.Mapiranja
     {
         public Magijsko_cudovisteMapiranja()
         {
-            Table("Magijsko_cudoviste");
+            Table("MAGIJSKO_CUDOVISTE");
 
-            KeyColumn("Id");
+            KeyColumn("ID_Magijskog");
 
-            Map(x => x.Da_li_postoji).Column("Da_li_postoji");
+            Map(x => x.Da_li_postoji).Column("DA_LI_POSTOJI");
+
+            HasMany(x=>x.Poseduje_sposobnosti).KeyColumn("ID_MAGIJSKOG").LazyLoad().Cascade.All().Inverse();
         }
     }
 }

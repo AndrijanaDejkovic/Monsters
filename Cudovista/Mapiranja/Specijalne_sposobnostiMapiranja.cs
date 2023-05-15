@@ -11,12 +11,13 @@ using Cudovista.Entiteti;
     {
         public Specijalne_sposobnostiMapiranja()
         {
-            Table("Specijalne_sposobnosti");
+            Table("SPECIJALNE_SPOSOBNOSTI");
 
-            //KeyColumn("Spec_Sposobnosti"); //treba da se pita aleksandar za id sta da se radi
+            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Spec_sposobnosti).Column("Spec_sposobnosti");
-            //ovo stoji ako dodajemo sposobnosti
+            Map(x => x.Spec_sposobnosti).Column("SPEC_SPOSOBNOSTI");
+    
+            References(x => x.Id_cudovista).Column("ID_SPOSOBNOSTI").LazyLoad();
         }
     }
 

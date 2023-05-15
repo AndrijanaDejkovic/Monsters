@@ -11,16 +11,16 @@ using Cudovista.Entiteti;
     {
         public LegendeMapiranja()
         {
-            Table("Legende");
+            Table("LEGENDE");
 
-            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Tekst).Column("Tekst");
-            Map(x => x.Prvo_pominjanje).Column("Prvo_pominjanje");
-            Map(x => x.Zemlja_porekla).Column("Zemlja_porekla");
+            Map(x => x.Tekst).Column("TEKST");
+            Map(x => x.Prvo_pominjanje).Column("PRVO_POMINJANJE");
+            Map(x => x.Zemlja_porekla).Column("ZEMLJA_POREKLA");
 
             //mapiranje veze 1:N Cudoviste-Legende
-            References(x => x.PropadaCudovistu).Column("ID_Cudovista").LazyLoad();
+            References(x => x.Id_cudovista).Column("ID_CUDOVISTA"); //.LazyLoad();
 
         }
     }

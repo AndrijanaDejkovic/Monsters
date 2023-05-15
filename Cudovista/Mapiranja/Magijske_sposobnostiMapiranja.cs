@@ -12,13 +12,15 @@ using Cudovista.Entiteti;
 
         public Magisjke_sposobnostiMapiranja()
         {
-            Table("Magijske_sposobnosti");
+            Table("MAGIJSKE_SPOSOBNOSTI");
 
-            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Naziv_sposobnosti).Column("Naziv_sposobnosti");
-            Map(x => x.Da_li_je_odbrambena).Column("Da_li_je_odbrambena");
-            Map(x => x.Opis_sposobnosti).Column("Opis_sposobnosti");
+            Map(x => x.Naziv_sposobnosti).Column("NAZIV_SPOSOBNOSTI");
+            Map(x => x.Da_li_je_odbrambena).Column("DA_LI_JE_ODBRAMBENA");
+            Map(x => x.Opis_sposobnosti).Column("OPIS_SPOSOBNOSTI");
+
+            References(x => x.Id_cudovista).Column("ID_SPOSOBNOSTI").LazyLoad();
 
         }
     }

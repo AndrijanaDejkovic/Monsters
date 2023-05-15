@@ -8,11 +8,11 @@ namespace Cudovista.Entiteti
 {
     public abstract class Materijal
     {
-        public virtual int Id { get; set; }
+        public virtual int ID { get; set; }
 
         //public virtual string Tip_materijala { get; set; }
         //treba da se izbrise kolona u bazi
-
+        public virtual Predmet Pripada_predmetu { get; set; }
     }
 
     public class Zlato : Materijal

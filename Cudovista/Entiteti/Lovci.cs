@@ -8,8 +8,9 @@ namespace Cudovista.Entiteti
 {
     public class Lovci
     {
-        public virtual int Id { get; set; }
+        public virtual int ID { get; set; }
         public virtual string Ime_lovca { get; set; }
+        public virtual Predstavnik Id_predstavnika { get; set; }
 
     }
 }

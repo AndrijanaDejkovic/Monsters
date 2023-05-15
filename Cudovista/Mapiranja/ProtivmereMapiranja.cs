@@ -12,16 +12,16 @@ using Cudovista.Entiteti;
         public ProtivmereMapiranja()
         {
 
-            Table("Protivmere");
+            Table("PROTIVMERE");
 
-            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Naziv_protivmere).Column("Naziv_protivmere");
-            Map(x => x.Opis_protivmere).Column("Opis_protivmere");
-            Map(x => x.Da_li_uslovi).Column("Da_li_uslovi");
+            Map(x => x.Naziv_protivmere).Column("NAZIV_PROTIVMERE");
+            Map(x => x.Opis_protivmere).Column("OPIS_PROTIVMERE");
+            Map(x => x.Da_li_uslovi).Column("DA_LI_USLOVI");
 
             //mapiranje veze 1:N Cudoviste-Protuvmera
-            References(x => x.PropadaCudovistu).Column("ID_Cudovista").LazyLoad();
+            References(x => x.Id_cudovista).Column("ID_PROTIVMERE").LazyLoad();
 
         }
     }

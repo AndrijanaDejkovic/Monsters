@@ -11,15 +11,60 @@ namespace Cudovista.Mapiranja
     {
         public LokacijaMapiranja()
         {
-            Table("Lokacija");
+            Table("LOKACIJA");
 
-            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Naziv_lokacije).Column("Naziv_lokacije");
-            Map(x => x.Tip_lokacije).Column("Tip_lokacije");
-            Map(x => x.Zemlja).Column("Zemlja");
-            Map(x => x.Blago).Column("Blago");
+            Map(x => x.Naziv_lokacije).Column("NAZIV_LOKACIJE");
+            /*Map(x => x.tip).Column("Tip_lokacije");*/
+            Map(x => x.Zemlja).Column("ZENLJA");
+            Map(x => x.Blago).Column("BLAGO");
 
+            References(x => x.Borio_se).Unique().Column("ID_LOKACIJE").LazyLoad();
+            HasMany(x => x.Zastite).KeyColumn("ID_LOKACIJE").LazyLoad().Cascade.All().Inverse();
+        }
+    }
+
+    class GrobnicaMapiranja : SubclassMap<Lokacija>
+    {
+        public GrobnicaMapiranja()
+        {
+            DiscriminatorValue("Grobnica");
+        }
+    }
+    class OstrvoMapiranja : SubclassMap<Lokacija>
+    {
+        public OstrvoMapiranja()
+        {
+            DiscriminatorValue("Ostrvo");
+        }
+    }
+    class PecinaMapiranja : SubclassMap<Lokacija>
+    {
+        public PecinaMapiranja()
+        {
+            DiscriminatorValue("Pecina");
+        }
+    }
+    class Grad_duhovaMapiranja : SubclassMap<Lokacija>
+    {
+        public Grad_duhovaMapiranja()
+        {
+            DiscriminatorValue("Grad_duhova");
+        }
+    }
+    class PiramidaMapiranja : SubclassMap<Lokacija>
+    {
+        public PiramidaMapiranja()
+        {
+            DiscriminatorValue("Piramida");
+        }
+    }
+    class Ukleti_zamakMapiranja : SubclassMap<Lokacija>
+    {
+        public Ukleti_zamakMapiranja()
+        {
+            DiscriminatorValue("Ukleti_zamak");
         }
     }
 }

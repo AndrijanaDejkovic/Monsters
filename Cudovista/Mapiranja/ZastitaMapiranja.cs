@@ -11,13 +11,38 @@ using Cudovista.Entiteti;
     {
         public ZastitaMapiranja()
         {
-            Table("Zastita");
+            Table("ZASTITA");
 
-            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
             Map(x => x.Naziv).Column("Naziv");
-            Map(x => x.Tip_zastite).Column("Tip_zastite");
+            References(x => x.Id_lokacije).Column("BROJP").LazyLoad();
         }
     }
+    class DuhMapiranja : SubclassMap<Duh>
+    {
+        public DuhMapiranja()
+        {
+            DiscriminatorValue("Duh");
+        }
+    }
+
+    class ZmajMapiranja : SubclassMap<Zmaj>
+    {
+        public ZmajMapiranja()
+        {
+            DiscriminatorValue("Duh");
+        }
+    }
+
+    class KletvaMapiranja : SubclassMap<Kletva>
+    {
+        public KletvaMapiranja()
+        {
+            DiscriminatorValue("Duh");
+        }
+    }
+
+
 }
 

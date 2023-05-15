@@ -1,6 +1,6 @@
-﻿namespace Cudovista
+﻿namespace Cudovista.Forme
 {
-    partial class Form1
+    partial class DodajLokaciju
     {
         /// <summary>
         /// Required designer variable.
@@ -33,29 +33,30 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(58, 36);
+            this.button1.Location = new System.Drawing.Point(219, 223);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 75);
+            this.button1.Size = new System.Drawing.Size(179, 70);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // DodajLokaciju
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "DodajLokaciju";
+            this.Text = "Lokacja";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button button1;
     }
 }
-

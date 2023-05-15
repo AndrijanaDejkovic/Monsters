@@ -8,22 +8,23 @@ using Cudovista.Entiteti;
 namespace Cudovista.Mapiranja
 {
 
-    public class CudovisteMapiranja : ClassMap<Cudoviste>
+    public class CudovisteMapiranja : ClassMap<Cudovista.Entiteti.Cudoviste>
 	{
 		public CudovisteMapiranja()
 		{
-            Table("Cudoviste"); //proveri da li su tabele veliki slovima
+            Table("CUDOVISTE"); //proveri da li su tabele veliki slovima
 
-            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Vek).Column("Vek");
-            Map(x => x.Naziv_cudovista).Column("Naziv_cudovista");
-            Map(x => x.Podtip).Column("Podtip");
+            Map(x => x.Vek).Column("VEK");
+            Map(x => x.Naziv_cudovista).Column("NAZIV_CUDOVISTA");
+            Map(x => x.Podtip).Column("PODTIP");
 
-            HasMany(x => x.Predmeti).KeyColumn("ID_Predmeta").LazyLoad().Cascade.All().Inverse(); //proveri imena kolona
-            HasMany(x => x.Legende).KeyColumn("ID_Legende").LazyLoad().Cascade.All().Inverse(); //proveri
-            HasMany(x => x.Predstavnici).KeyColumn("ID_Predstavnika").LazyLoad().Cascade.All().Inverse(); //proveri
-            HasMany(x => x.Protivmere).KeyColumn("ID_Protivmere").LazyLoad().Cascade.All().Inverse(); //proveri
+            HasMany(x => x.Predmeti).KeyColumn("Id_cudovista").LazyLoad().Cascade.All().Inverse(); 
+            HasMany(x => x.Legende).KeyColumn("Id_cudovista").LazyLoad().Cascade.All().Inverse(); 
+            HasMany(x => x.Predstavnici).KeyColumn("Id_cudovista").LazyLoad().Cascade.All().Inverse(); 
+            HasMany(x => x.Protivmere).KeyColumn("Id_cudovista").LazyLoad().Cascade.All().Inverse();
+            HasMany(x => x.Bajalice).KeyColumn("Id_cudovista").LazyLoad().Cascade.All().Inverse();
 
         }
 	}

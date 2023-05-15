@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using NHibernate;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-//using Prodavnica.Mapiranja;
+using Cudovista.Mapiranja;
+using FluentNHibernate;
 
 namespace Cudovista
 {
@@ -41,10 +42,12 @@ namespace Cudovista
                 .ConnectionString(c =>
                     c.Is("DATA SOURCE=gislab-oracle.elfak.ni.ac.rs:1521/SBP_PDB;PERSIST SECURITY INFO=True;USER ID=S19027;Password=S19027"));
 
+                 
                 return Fluently.Configure()
                     .Database(cfg)
-                //    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<ProdavnicaMapiranja>())
-                    //.ExposeConfiguration(BuildSchema)
+                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<BajaliceMapiranja>())
+
+/*                    .ExposeConfiguration(BuildSchema)*/
                     .BuildSessionFactory();
             }
             catch (Exception ec)
@@ -52,7 +55,6 @@ namespace Cudovista
                 System.Windows.Forms.MessageBox.Show(ec.Message);
                 return null;
             }
-
         }
     }
 }
