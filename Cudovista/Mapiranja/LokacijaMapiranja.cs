@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,15 +16,15 @@ namespace Cudovista.Mapiranja
             Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
             DiscriminateSubClassesOnColumn("Tip_lokacije");
             Map(x => x.Naziv_lokacije).Column("NAZIV_LOKACIJE");
-           // Map(x => x.tip).Column("Tip_lokacije");
-            Map(x => x.Zemlja).Column("ZENLJA");
+            // Map(x => x.tip).Column("Tip_lokacije");
+            Map(x => x.Zemlja).Column("ZEMLJA");
             Map(x => x.Blago).Column("BLAGO");
 
-            References(x => x.Borio_se).Unique().Column("Borio_se").LazyLoad();
-         //   HasMany(x => x.Zastite).KeyColumn("ID_LOKACIJE").LazyLoad().Cascade.All().Inverse();
+            HasOne(x => x.Borio_se).Cascade.All();
+            HasMany(x => x.Zastite).KeyColumn("ID_LOKACIJE").LazyLoad().Cascade.All().Inverse();
         }
     }
-*//*
+
     class GrobnicaMapiranja : SubclassMap<Lokacija>
     {
         public GrobnicaMapiranja()
@@ -66,7 +66,6 @@ namespace Cudovista.Mapiranja
         {
             DiscriminatorValue("Ukleti_zamak");
         }
-    }*//*
+    }
 }
 
-*/

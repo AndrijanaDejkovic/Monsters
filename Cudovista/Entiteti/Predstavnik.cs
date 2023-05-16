@@ -15,7 +15,9 @@ namespace Cudovista.Entiteti
         public virtual string Ishod { get; set; }
         public virtual Cudoviste Id_cudovista { get; set; }
         public  virtual Lokacija Id_lokacije { get; set; }
-        public virtual IList<Lovac> Love_ga { get; set; }   
+
+        public virtual IList<Lovac> Love_ga { get; set; }
+        // public virtual IList<Zivi_na> ZiveNaLokacijama { get; set; }  //ne diraj dovrsicu jos ovo m
 
     }
 }

@@ -168,7 +168,7 @@ namespace Cudovista
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Lovac p = s.Get<Cudovista.Entiteti.Lovac>(2);
+                Cudovista.Entiteti.Lovac p = s.Get<Cudovista.Entiteti.Lovac>(1);
 
                 MessageBox.Show(p.Ime_lovca);
 
@@ -199,6 +199,80 @@ namespace Cudovista
             }
         }
 
-        
+        private void Materijal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                //Ucitavaju se podaci o prodavnici za zadatim brojem
+                Cudovista.Entiteti.Materijal p = s.Get<Cudovista.Entiteti.Materijal>(2);
+
+                MessageBox.Show(p.GetType().ToString().Split('.').Last());
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+        }
+
+        private void Predmet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                //Ucitavaju se podaci o prodavnici za zadatim brojem
+                Cudovista.Entiteti.Predmet p = s.Get<Cudovista.Entiteti.Predmet>(1);
+
+                MessageBox.Show(p.GetType().ToString());
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+        }
+
+        private void Zastita_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                //Ucitavaju se podaci o prodavnici za zadatim brojem
+                Cudovista.Entiteti.Zastita p = s.Get<Cudovista.Entiteti.Zastita>(1);
+
+                MessageBox.Show(p.Naziv_zastite);
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+        }
+
+        private void Lokacija_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                //Ucitavaju se podaci o prodavnici za zadatim brojem
+                Cudovista.Entiteti.Lokacija p = s.Get<Cudovista.Entiteti.Lokacija>(1);
+
+                MessageBox.Show(p.Naziv_lokacije);
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+        }
     }
 }

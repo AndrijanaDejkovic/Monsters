@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Cudovista.Entiteti
 {
-    internal class Zivi_na
+      public class Zivi_na
     {
-        public int ID { get; set; }
-        public IList<Lokacija> Id_lokacija { get; set; }
-        public IList<Predstavnik> Id_predstavnika { get; set; }
+        public virtual int ID { get; set; }
+        public virtual int Id_lokacija { get; set; } //brisi u   bazi
+        public virtual int Id_predstavnika { get; set; } //brisi u bazi
+
+        public virtual Lokacija  lokacijaZivljenja { get; set; }    
+        public virtual Predstavnik predstavnikZivi { get; set; }
+
     }
 }
 */

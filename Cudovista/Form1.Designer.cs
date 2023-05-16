@@ -36,6 +36,10 @@
             this.findSpecSposobnost = new System.Windows.Forms.Button();
             this.findLovac = new System.Windows.Forms.Button();
             this.findMagijsko = new System.Windows.Forms.Button();
+            this.Materijal = new System.Windows.Forms.Button();
+            this.Predmet = new System.Windows.Forms.Button();
+            this.Zastita = new System.Windows.Forms.Button();
+            this.Lokacija = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // findNameCudoviste
@@ -117,11 +121,55 @@
             this.findMagijsko.UseVisualStyleBackColor = true;
             this.findMagijsko.Click += new System.EventHandler(this.findMagijsko_Click);
             // 
+            // Materijal
+            // 
+            this.Materijal.Location = new System.Drawing.Point(43, 214);
+            this.Materijal.Name = "Materijal";
+            this.Materijal.Size = new System.Drawing.Size(116, 65);
+            this.Materijal.TabIndex = 9;
+            this.Materijal.Text = "Materijal";
+            this.Materijal.UseVisualStyleBackColor = true;
+            this.Materijal.Click += new System.EventHandler(this.Materijal_Click);
+            // 
+            // Predmet
+            // 
+            this.Predmet.Location = new System.Drawing.Point(17, 298);
+            this.Predmet.Name = "Predmet";
+            this.Predmet.Size = new System.Drawing.Size(168, 40);
+            this.Predmet.TabIndex = 10;
+            this.Predmet.Text = "Predmet";
+            this.Predmet.UseVisualStyleBackColor = true;
+            this.Predmet.Click += new System.EventHandler(this.Predmet_Click);
+            // 
+            // Zastita
+            // 
+            this.Zastita.Location = new System.Drawing.Point(248, 281);
+            this.Zastita.Name = "Zastita";
+            this.Zastita.Size = new System.Drawing.Size(172, 45);
+            this.Zastita.TabIndex = 11;
+            this.Zastita.Text = "Zastita";
+            this.Zastita.UseVisualStyleBackColor = true;
+            this.Zastita.Click += new System.EventHandler(this.Zastita_Click);
+            // 
+            // Lokacija
+            // 
+            this.Lokacija.Location = new System.Drawing.Point(482, 275);
+            this.Lokacija.Name = "Lokacija";
+            this.Lokacija.Size = new System.Drawing.Size(182, 62);
+            this.Lokacija.TabIndex = 12;
+            this.Lokacija.Text = "Lokacija";
+            this.Lokacija.UseVisualStyleBackColor = true;
+            this.Lokacija.Click += new System.EventHandler(this.Lokacija_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Lokacija);
+            this.Controls.Add(this.Zastita);
+            this.Controls.Add(this.Predmet);
+            this.Controls.Add(this.Materijal);
             this.Controls.Add(this.findMagijsko);
             this.Controls.Add(this.findLovac);
             this.Controls.Add(this.findSpecSposobnost);
@@ -145,6 +193,10 @@
         private System.Windows.Forms.Button findSpecSposobnost;
         private System.Windows.Forms.Button findLovac;
         private System.Windows.Forms.Button findMagijsko;
+        private System.Windows.Forms.Button Materijal;
+        private System.Windows.Forms.Button Predmet;
+        private System.Windows.Forms.Button Zastita;
+        private System.Windows.Forms.Button Lokacija;
     }
 }
 

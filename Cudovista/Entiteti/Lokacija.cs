@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Cudovista.Entiteti
 {
-    public abstract class Lokacija
+    public  class Lokacija
     {
         public virtual int ID { get; set; }
         public virtual string Naziv_lokacije { get; set; }
-        //public virtual string Tip_lokacije { get; set; }
+        public virtual string Tip_lokacije { get; set; }
         public virtual string Zemlja { get; set; }
         public virtual string Blago { get; set; }
         public virtual Predstavnik Borio_se { get; set; }
-        //public virtual IList<Zastita> Zastite { get; set; }
-        /*public class Grobnica : Lokacija
+        public virtual IList<Zastita> Zastite { get; set; }
+       // public virtual IList<Zivi_na> ZivePredstavnici { get; set; } //ne diraj dovrsicu jos ovo m
+        public class Grobnica : Lokacija
         {
 
         }
@@ -38,6 +39,6 @@ namespace Cudovista.Entiteti
         public class Pecina : Lokacija
         {
 
-        }*/
+        }
     }
 }

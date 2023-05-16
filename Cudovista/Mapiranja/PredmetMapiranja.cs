@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +21,7 @@ namespace Cudovista.Mapiranja
             //mapiranje veze 1:N Cudoviste-Predmet
             References(x => x.Id_cudovista).Column("Id_cudovista").LazyLoad();
             //MAPIRANJE ONE TO ONE
-            // References(x => x.Id_materijala).Column("ID_MATERIJALA").Unique().LazyLoad();
+            References(x => x.ID_Materijala).Column("ID_Materijala").Unique().LazyLoad();
 
         }
     }
@@ -54,4 +54,3 @@ namespace Cudovista.Mapiranja
         }
     }
 }
-*/

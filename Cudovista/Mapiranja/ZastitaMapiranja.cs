@@ -1,11 +1,11 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using FluentNHibernate.Mapping;
 using Cudovista.Entiteti;
 
- namespace Cudovista.Mapiranja
+namespace Cudovista.Mapiranja
 {
     public class ZastitaMapiranja : ClassMap<Zastita>
     {
@@ -13,10 +13,12 @@ using Cudovista.Entiteti;
         {
             Table("ZASTITA");
 
+            DiscriminateSubClassesOnColumn("Tip_Zastite");
+
             Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
-            Map(x => x.Naziv).Column("Naziv");
-            References(x => x.Id_lokacije).Column("BROJP").LazyLoad();
+            Map(x => x.Naziv_zastite).Column("NAZIV_ZASTITE");
+            References(x => x.Id_lokacije).Column("ID_LOKACIJE").LazyLoad();
         }
     }
     class DuhMapiranja : SubclassMap<Duh>
@@ -46,4 +48,3 @@ using Cudovista.Entiteti;
 
 }
 
-*/

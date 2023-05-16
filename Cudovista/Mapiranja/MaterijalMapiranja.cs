@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,12 +17,12 @@ namespace Cudovista.Mapiranja
 
             DiscriminateSubClassesOnColumn("Tip_Materijala");
 
-            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID").GeneratedBy.SequenceIdentity();
 
 
-           // HasOne(x => x.Pripada_predmetu).PropertyRef(x => x.Id_materijala);
+            HasOne(x => x.Pripada_predmetu).PropertyRef(x => x.ID_Materijala);
 
-            
+
         }
 
     }
@@ -63,4 +63,3 @@ namespace Cudovista.Mapiranja
     }
 }
 
-*/

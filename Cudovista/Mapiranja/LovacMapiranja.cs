@@ -15,6 +15,8 @@ namespace Cudovista.Mapiranja
 
             Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
+            Map(x => x.Ime_lovca).Column("IME_LOVCA");
+
             References(x => x.Id_predstavnika).Column("Id_predstavnika").LazyLoad();
         }
     }
