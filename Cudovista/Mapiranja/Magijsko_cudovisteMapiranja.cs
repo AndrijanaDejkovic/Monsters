@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,13 +13,12 @@ namespace Cudovista.Mapiranja
         {
             Table("MAGIJSKO_CUDOVISTE");
 
-            KeyColumn("ID_Magijskog");
+            KeyColumn("ID_MAGIJSKOG");
 
             Map(x => x.Da_li_postoji).Column("DA_LI_POSTOJI");
 
-            HasMany(x=>x.Poseduje_sposobnosti).KeyColumn("ID_MAGIJSKOG").LazyLoad().Cascade.All().Inverse();
+            HasMany(x => x.Poseduje_sposobnosti).KeyColumn("Id_cudovista").LazyLoad().Cascade.All().Inverse();
         }
     }
 }
 
-*/

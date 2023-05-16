@@ -10,8 +10,8 @@ namespace Cudovista.Entiteti
     {
         public virtual int ID { get; set; }
 
-        //public virtual string Tip_materijala { get; set; }
-        //treba da se izbrise kolona u bazi
+        public virtual string Tip_Materijala { get; set; }
+
         public virtual Predmet Pripada_predmetu { get; set; }
     }
 

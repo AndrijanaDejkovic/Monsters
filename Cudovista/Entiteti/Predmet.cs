@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,18 +10,18 @@ namespace Cudovista.Entiteti
     {
         public virtual int ID { get; set; }
         public virtual Cudoviste Id_cudovista { get; set; }
-       // public Materijal Id_materijala { get; set; }
+        //public Materijal Id_materijala { get; set; }
 
-        //public virtual string Tip_predmeta { get; set; }
-        //isto kao kod materijala se brise tip
+        public virtual string Tip_Predmeta { get; set; }
+
     }
 
     public class Lobanja : Predmet
     {
-
+        
     }
 
-    public class    Krst : Predmet
+    public class Krst : Predmet
     {
 
     }
@@ -35,3 +35,4 @@ namespace Cudovista.Entiteti
 
     }
 }
+*/

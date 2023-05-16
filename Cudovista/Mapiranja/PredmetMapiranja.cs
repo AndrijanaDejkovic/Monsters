@@ -1,23 +1,28 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using FluentNHibernate.Mapping;
 using Cudovista.Entiteti;
-
- namespace Cudovista.Mapiranja
+using System.Threading.Tasks;
+namespace Cudovista.Mapiranja
 {
     public class PredmetMapiranja : ClassMap<Predmet>
     {
         public PredmetMapiranja()
         {
-            Table("Predmet");
+            Table("PREDMET");
+
+            //MAPIRANJE PODKLASA
+            DiscriminateSubClassesOnColumn("Tip_Predmeta");
 
             Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
             //mapiranje veze 1:N Cudoviste-Predmet
             References(x => x.Id_cudovista).Column("Id_cudovista").LazyLoad();
-          //  HasOne(x => x.Id_materijala).Cascade.All();
+            //MAPIRANJE ONE TO ONE
+            // References(x => x.Id_materijala).Column("ID_MATERIJALA").Unique().LazyLoad();
+
         }
     }
     class LobanjaMapiranja : SubclassMap<Lobanja>
@@ -49,3 +54,4 @@ using Cudovista.Entiteti;
         }
     }
 }
+*/

@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +14,8 @@ namespace Cudovista.Entiteti
         public virtual string Zemlja { get; set; }
         public virtual string Blago { get; set; }
         public virtual Predstavnik Borio_se { get; set; }
-        public virtual IList<Zastita> Zastite { get; set; }
-        public  class Grobnica : Lokacija
+        //public virtual IList<Zastita> Zastite { get; set; }
+        /*public class Grobnica : Lokacija
         {
 
         }
@@ -38,7 +38,6 @@ namespace Cudovista.Entiteti
         public class Pecina : Lokacija
         {
 
-        }
+        }*/
     }
 }
-*/

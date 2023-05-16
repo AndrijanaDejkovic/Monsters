@@ -14,7 +14,7 @@ namespace Cudovista.Entiteti
         public virtual string Podtip { get; set; }
 
         public virtual IList<Protivmere> Protivmere { get; set; }
-        public virtual IList<Predmet> Predmeti { get; set; }
+      //  public virtual IList<Predmet> Predmeti { get; set; }
         public virtual IList<Predstavnik> Predstavnici { get; set; }
         public virtual IList<Legende> Legende { get; set; }
         public virtual IList<Bajalice> Bajalice { get; set; }
@@ -24,7 +24,7 @@ namespace Cudovista.Entiteti
         public Cudoviste()
         {
             Protivmere = new List<Protivmere>();
-            Predmeti = new List<Predmet>();
+          //  Predmeti = new List<Predmet>();
             Predstavnici = new List<Predstavnik>();
             Legende = new List<Legende>();
             Bajalice = new List<Bajalice>();

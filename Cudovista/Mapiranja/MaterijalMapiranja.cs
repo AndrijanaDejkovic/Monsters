@@ -5,20 +5,24 @@ using System.Text;
 using FluentNHibernate.Mapping;
 using Cudovista.Entiteti;
 
- namespace Cudovista.Mapiranja
+namespace Cudovista.Mapiranja
 {
-   
+
     public class MaterijalMapiranja : ClassMap<Materijal>
     {
         public MaterijalMapiranja()
         {
 
-            Table("MATERIJALI");
+            Table("MATERIJAL");
+
+            DiscriminateSubClassesOnColumn("Tip_Materijala");
 
             Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
 
-            References(x => x.Pripada_predmetu).Unique().Column("ID_MATERIJALA").LazyLoad();
 
+           // HasOne(x => x.Pripada_predmetu).PropertyRef(x => x.Id_materijala);
+
+            
         }
 
     }

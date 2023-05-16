@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,7 @@ namespace Cudovista.Entiteti
         public virtual int Da_li_leti { get; set; }
         public virtual int Da_li_ima_rep { get; set; }
         public virtual int Da_li_je_otrovno { get; set; }
-        public virtual int Da_li_ima_kandze{ get; set; }
+        public virtual int Da_li_ima_kandze { get; set; }
         public virtual int Broj_ociju { get; set; }
         public virtual int Broj_glava { get; set; }
         public virtual int Broj_ekstremiteta { get; set; }
@@ -23,4 +23,3 @@ namespace Cudovista.Entiteti
 
     }
 }
-*/

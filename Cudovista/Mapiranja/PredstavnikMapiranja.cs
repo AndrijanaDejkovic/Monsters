@@ -23,7 +23,7 @@ using Cudovista.Entiteti;
             //mapiranje veze 1:N Cudoviste-Predstavnik
             References(x => x.Id_cudovista).Column("Id_cudovista").LazyLoad();
          //   HasOne(x => x.Id_lokacije).Cascade.All();
-          //  HasMany(x => x.Love_ga).KeyColumn("Id_predstavnika").LazyLoad().Cascade.All().Inverse();
+            HasMany(x => x.Love_ga).KeyColumn("Id_predstavnika").LazyLoad().Cascade.All().Inverse();
 
         }
     }

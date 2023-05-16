@@ -25,4 +25,3 @@ using Cudovista.Entiteti;
         }
     }
 }
-

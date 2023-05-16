@@ -1,18 +1,18 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using FluentNHibernate.Mapping;
 using Cudovista.Entiteti;
 
- namespace Cudovista.Mapiranja
+namespace Cudovista.Mapiranja
 {
     public class Nemagijsko_cudovisteMapiranja : SubclassMap<Nemagijsko_cudoviste>
     {
         public Nemagijsko_cudovisteMapiranja()
         {
 
-            Table("Nemagijsko_cudoviste");
+            Table("NEMAGIJSKO_CUDOVISTE");
 
             KeyColumn("ID_Nemagijskog");
 
@@ -31,4 +31,3 @@ using Cudovista.Entiteti;
     }
 
 }
-*/

@@ -51,7 +51,7 @@
     <Compile Include="Entiteti\Cudoviste.cs" />
     <Compile Include="Entiteti\Legende.cs" />
     <Compile Include="Entiteti\Lokacija.cs" />
-    <Compile Include="Entiteti\Lovci.cs" />
+    <Compile Include="Entiteti\Lovac.cs" />
     <Compile Include="Entiteti\Magijske_sposobnosti.cs" />
     <Compile Include="Entiteti\Magijsko_cudoviste.cs" />
     <Compile Include="Entiteti\Materijal.cs" />
@@ -84,7 +84,7 @@
     <Compile Include="Mapiranja\CudovisteMapiranja.cs" />
     <Compile Include="Mapiranja\LegendeMapiranja.cs" />
     <Compile Include="Mapiranja\LokacijaMapiranja.cs" />
-    <Compile Include="Mapiranja\LovciMapiranja.cs" />
+    <Compile Include="Mapiranja\LovacMapiranja.cs" />
     <Compile Include="Mapiranja\Magijske_sposobnostiMapiranja.cs" />
     <Compile Include="Mapiranja\Magijsko_cudovisteMapiranja.cs" />
     <Compile Include="Mapiranja\MaterijalMapiranja.cs" />
