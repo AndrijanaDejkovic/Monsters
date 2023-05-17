@@ -22,6 +22,8 @@ namespace Cudovista.Mapiranja
 
             HasOne(x => x.Borio_se).Cascade.All();
             HasMany(x => x.Zastite).KeyColumn("ID_LOKACIJE").LazyLoad().Cascade.All().Inverse();
+            //mapiranje zivi na veze
+            HasMany(x => x.ZivePredstavnici).KeyColumn("Id_lokacije").LazyLoad().Cascade.All().Inverse();
         }
     }
 
@@ -68,4 +70,3 @@ namespace Cudovista.Mapiranja
         }
     }
 }
-

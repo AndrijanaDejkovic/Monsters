@@ -5,7 +5,7 @@ using System.Text;
 using FluentNHibernate.Mapping;
 using Cudovista.Entiteti;
 
- namespace Cudovista.Mapiranja
+namespace Cudovista.Mapiranja
 {
     public class PredstavnikMapiranja : ClassMap<Predstavnik>
     {
@@ -23,10 +23,11 @@ using Cudovista.Entiteti;
             //mapiranje veze 1:N Cudoviste-Predstavnik
             References(x => x.Id_cudovista).Column("Id_cudovista").LazyLoad();
             References(x => x.Id_lokacije).Unique().Column("Id_lokacije").LazyLoad();
-            
+
             HasMany(x => x.Love_ga).KeyColumn("Id_predstavnika").LazyLoad().Cascade.All().Inverse();
+            //mapiranje zivi na
+            HasMany(x => x.ZiveNaLokacijama).KeyColumn("Id_predstavnika").LazyLoad().Cascade.All().Inverse();
 
         }
     }
 }
-

@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataLayer.cs" />
+    <Compile Include="DTOManager.cs" />
+    <Compile Include="DTOs.cs" />
     <Compile Include="Entiteti\Bajalice.cs" />
     <Compile Include="Entiteti\Cudoviste.cs" />
     <Compile Include="Entiteti\Legende.cs" />
@@ -80,6 +82,18 @@
     <Compile Include="Forme\DodajLokaciju.Designer.cs">
       <DependentUpon>DodajLokaciju.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FormaTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FormaTest.Designer.cs">
+      <DependentUpon>FormaTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SvaNemagijskaCudovistaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SvaNemagijskaCudovistaForma.Designer.cs">
+      <DependentUpon>SvaNemagijskaCudovistaForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mapiranja\BajaliceMapiranja.cs" />
     <Compile Include="Mapiranja\CudovisteMapiranja.cs" />
     <Compile Include="Mapiranja\LegendeMapiranja.cs" />
@@ -94,6 +108,7 @@
     <Compile Include="Mapiranja\ProtivmereMapiranja.cs" />
     <Compile Include="Mapiranja\Specijalne_sposobnostiMapiranja.cs" />
     <Compile Include="Mapiranja\ZastitaMapiranja.cs" />
+    <Compile Include="Mapiranja\Zivi_naMapiranja.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +117,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajLokaciju.resx">
       <DependentUpon>DodajLokaciju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FormaTest.resx">
+      <DependentUpon>FormaTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SvaNemagijskaCudovistaForma.resx">
+      <DependentUpon>SvaNemagijskaCudovistaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
