@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Cudovista
@@ -270,34 +271,50 @@ namespace Cudovista
         }
     }
 
-    public class CudivisteBasic
+  
+    public class LegendePregled
     {
-
         public int ID;
-        public int Vek;
-        public string Naziv_cudovista;
-        public string Podtip;
+        public string Tekst;
+        public DateTime Prvo_pominjanje;
+        public string Zemlja_porekla;
+        public Cudoviste Id_cudovista;
 
-        public IList<Protivmere> Protivmere;
-        //  public virtual IList<Predmet> Predmeti { get; set; }
-        public IList<Predstavnik> Predstavnici;
-        public IList<Legende> Legende;
-        public IList<Bajalice> Bajalice;
-
-
-        public CudivisteBasic()
+        public LegendePregled()
         {
-            Protivmere = new List<Protivmere>();
-            Predstavnici = new List<Predstavnik>();
-            Legende = new List<Legende>();
-            Bajalice = new List<Bajalice>();
+
         }
-        public CudivisteBasic(int id, string podtip, string naziv_cudovista, int vek)
+        public LegendePregled(int id, string tekst, DateTime prvo_pominjanje, string Zemlja_porekla, Cudoviste id_cudovista)
         {
             this.ID = id;
-            this.Naziv_cudovista = naziv_cudovista;
-            this.Podtip = podtip;
-            this.Vek = vek;
+            this.Tekst = tekst;
+            this.Prvo_pominjanje = prvo_pominjanje;
+            this.Zemlja_porekla = Zemlja_porekla;
+            this.Id_cudovista =id_cudovista;
+
+    }
+    }
+
+    public class LegendeBasic
+    {
+        public int ID;
+        public string Tekst;
+        public DateTime Prvo_pominjanje;
+        public string Zemlja_porekla;
+        public Cudoviste Id_cudovista;
+
+
+        public LegendeBasic()
+        {
+           
+        }
+        public LegendeBasic(int id, string tekst, DateTime prvo_pominjanje, string Zemlja_porekla, Cudoviste id_cudovista)
+        {
+            this.ID = id;
+            this.Tekst = tekst;
+            this.Prvo_pominjanje = prvo_pominjanje;
+            this.Zemlja_porekla = Zemlja_porekla;
+            this.Id_cudovista = id_cudovista;
         }
     }
 

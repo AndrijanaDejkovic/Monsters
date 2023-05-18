@@ -354,7 +354,7 @@ namespace Cudovista
 
             return odInfos;
         }
-        public static void izmeniOdeljenjeDo5(KrstBasic predmet)
+        public static void izmeniKrst(KrstBasic predmet)
         {
             try
             {
@@ -413,6 +413,298 @@ namespace Cudovista
             }
         }
         #endregion Krst
+
+        #region Lobanja 
+
+        public static KrstBasic vratiLobanjuBasic(int id)
+        {
+            KrstBasic o = new KrstBasic();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Lobanja predmet = s.Load<Lobanja>(id);
+
+                o.ID = predmet.ID;
+                o.Id_cudovista = predmet.Id_cudovista;
+                o.ID_Materijala = predmet.ID_Materijala;
+                o.Tip_Predmeta = predmet.Tip_Predmeta;
+
+
+
+
+                s.Close();
+
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+
+            return o;
+
+        }
+      
+        public static List<LobanjaPregled> vratiLobanju(int CudovisteId)
+        {
+            List<LobanjaPregled> odInfos = new List<LobanjaPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                IEnumerable<Lobanja> predmeti = from o in s.Query<Lobanja>()
+                                             where o.Id_cudovista.ID == CudovisteId
+                                             select o;
+
+                foreach (Lobanja o in predmeti)
+                {
+                    odInfos.Add(new LobanjaPregled(o.ID, o.Id_cudovista, o.ID_Materijala, o.Tip_Predmeta));
+                }
+
+                s.Close();
+
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+
+            return odInfos;
+        }
+        public static void izmeniLobanju(LobanjaBasic predmet)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Cudovista.Entiteti.Lobanja o = s.Load<Lobanja>(predmet.ID);
+
+
+                o.ID = predmet.ID;
+                o.Id_cudovista = predmet.Id_cudovista;
+                o.ID_Materijala = predmet.ID_Materijala;
+                o.Tip_Predmeta = predmet.Tip_Predmeta;
+
+
+
+                s.SaveOrUpdate(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+        }
+
+
+        public static void sacuvajLobanju(LobanjaBasic predmet)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Cudovista.Entiteti.Lobanja o = new Cudovista.Entiteti.Lobanja();
+
+
+                o.ID = predmet.ID;
+                o.Id_cudovista = predmet.Id_cudovista;
+                o.ID_Materijala = predmet.ID_Materijala;
+                o.Tip_Predmeta = predmet.Tip_Predmeta;
+
+                //Cudovista.Entiteti.Predmet p = s.Load<Cudovista.Entiteti.Predmet>(predmet.Id_cudovista.ID);
+                //o.PripadaProdavnici = p;
+
+
+                s.Save(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+        }
+
+        #endregion Lobanja
+        #region Mac
+        public static List<MacPregled> vratiMac(int CudovisteId)
+        {
+            List<MacPregled> odInfos = new List<MacPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                IEnumerable<Mac> predmeti = from o in s.Query<Mac>()
+                                                where o.Id_cudovista.ID == CudovisteId
+                                                select o;
+
+                foreach (Mac o in predmeti)
+                {
+                    odInfos.Add(new MacPregled(o.ID, o.Id_cudovista, o.ID_Materijala, o.Tip_Predmeta));
+                }
+
+                s.Close();
+
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+
+            return odInfos;
+        }
+        public static void izmeniMac(MacBasic predmet)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Cudovista.Entiteti.Mac o = s.Load<Mac>(predmet.ID);
+
+
+                o.ID = predmet.ID;
+                o.Id_cudovista = predmet.Id_cudovista;
+                o.ID_Materijala = predmet.ID_Materijala;
+                o.Tip_Predmeta = predmet.Tip_Predmeta;
+
+
+
+                s.SaveOrUpdate(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+        }
+
+
+        public static void sacuvajMac(MacBasic predmet)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Cudovista.Entiteti.Mac o = new Cudovista.Entiteti.Mac();
+
+
+                o.ID = predmet.ID;
+                o.Id_cudovista = predmet.Id_cudovista;
+                o.ID_Materijala = predmet.ID_Materijala;
+                o.Tip_Predmeta = predmet.Tip_Predmeta;
+
+                //Cudovista.Entiteti.Predmet p = s.Load<Cudovista.Entiteti.Predmet>(predmet.Id_cudovista.ID);
+                //o.PripadaProdavnici = p;
+
+
+                s.Save(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+        }
+        #endregion Mac
+
+        #region Knjiga
+        public static List<KnjigaPregled> vratiKnjiga(int CudovisteId)
+        {
+            List<KnjigaPregled> odInfos = new List<KnjigaPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                IEnumerable<Knjiga> predmeti = from o in s.Query<Knjiga>()
+                                            where o.Id_cudovista.ID == CudovisteId
+                                            select o;
+
+                foreach (Knjiga o in predmeti)
+                {
+                    odInfos.Add(new KnjigaPregled(o.ID, o.Id_cudovista, o.ID_Materijala, o.Tip_Predmeta));
+                }
+
+                s.Close();
+
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+
+            return odInfos;
+        }
+        public static void izmeniKnjiga(KnjigaBasic predmet)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Cudovista.Entiteti.Knjiga o = s.Load<Knjiga>(predmet.ID);
+
+
+                o.ID = predmet.ID;
+                o.Id_cudovista = predmet.Id_cudovista;
+                o.ID_Materijala = predmet.ID_Materijala;
+                o.Tip_Predmeta = predmet.Tip_Predmeta;
+
+
+
+                s.SaveOrUpdate(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+        }
+
+
+        public static void sacuvajKnjigu(KnjigaBasic predmet)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Cudovista.Entiteti.Knjiga o = new Cudovista.Entiteti.Knjiga();
+
+
+                o.ID = predmet.ID;
+                o.Id_cudovista = predmet.Id_cudovista;
+                o.ID_Materijala = predmet.ID_Materijala;
+                o.Tip_Predmeta = predmet.Tip_Predmeta;
+
+                //Cudovista.Entiteti.Predmet p = s.Load<Cudovista.Entiteti.Predmet>(predmet.Id_cudovista.ID);
+                //o.PripadaProdavnici = p;
+
+
+                s.Save(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+        }
+        #endregion Knjiga
+
         #endregion Predmet
 
     }
