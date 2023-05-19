@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Cudovista.Forme
 {
-    public partial class SvaNemagijskaCudovistaForma : Form
+    public partial class NemagijskaCudovistaForma : Form
     {
-        public SvaNemagijskaCudovistaForma()
+        public NemagijskaCudovistaForma()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
@@ -32,12 +27,12 @@ namespace Cudovista.Forme
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void DodajNemagijsko_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnObrisiNemagijskoCudoviste_Click(object sender, EventArgs e)
+        private void AzurirajNemagijsko_Click(object sender, EventArgs e)
         {
 
         }

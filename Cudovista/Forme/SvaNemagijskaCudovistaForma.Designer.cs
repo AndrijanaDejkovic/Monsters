@@ -40,7 +40,7 @@
             this.Otrovno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ImaKandze = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnObrisiNemagijskoCudoviste = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -116,15 +116,16 @@
             this.label1.Text = " Za brisanje cudovista, selektujte cudoviste.";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // btnObrisiNemagijskoCudoviste
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(570, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 66);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Obrisi";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnObrisiNemagijskoCudoviste.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisiNemagijskoCudoviste.Location = new System.Drawing.Point(570, 101);
+            this.btnObrisiNemagijskoCudoviste.Name = "btnObrisiNemagijskoCudoviste";
+            this.btnObrisiNemagijskoCudoviste.Size = new System.Drawing.Size(191, 66);
+            this.btnObrisiNemagijskoCudoviste.TabIndex = 2;
+            this.btnObrisiNemagijskoCudoviste.Text = "Obrisi";
+            this.btnObrisiNemagijskoCudoviste.UseVisualStyleBackColor = true;
+            this.btnObrisiNemagijskoCudoviste.Click += new System.EventHandler(this.btnObrisiNemagijskoCudoviste_Click);
             // 
             // SvaNemagijskaCudovistaForma
             // 
@@ -132,7 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnObrisiNemagijskoCudoviste);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
             this.Name = "SvaNemagijskaCudovistaForma";
@@ -156,6 +157,6 @@
         private System.Windows.Forms.ColumnHeader Otrovno;
         private System.Windows.Forms.ColumnHeader ImaKandze;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnObrisiNemagijskoCudoviste;
     }
 }

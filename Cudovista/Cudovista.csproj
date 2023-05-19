@@ -88,11 +88,53 @@
     <Compile Include="Forme\FormaTest.Designer.cs">
       <DependentUpon>FormaTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\NemagijskaCudovistaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\NemagijskaCudovistaForma.Designer.cs">
+      <DependentUpon>NemagijskaCudovistaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PredmetForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PredmetForma.Designer.cs">
+      <DependentUpon>PredmetForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PredstavnikForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PredstavnikForm.Designer.cs">
+      <DependentUpon>PredstavnikForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ProtivmereForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ProtivmereForma.Designer.cs">
+      <DependentUpon>ProtivmereForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SpecijalneSposobnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SpecijalneSposobnosti.Designer.cs">
+      <DependentUpon>SpecijalneSposobnosti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\SvaNemagijskaCudovistaForma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forme\SvaNemagijskaCudovistaForma.Designer.cs">
       <DependentUpon>SvaNemagijskaCudovistaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZastitaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZastitaForma.Designer.cs">
+      <DependentUpon>ZastitaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZiviNaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZiviNaForma.Designer.cs">
+      <DependentUpon>ZiviNaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Mapiranja\BajaliceMapiranja.cs" />
     <Compile Include="Mapiranja\CudovisteMapiranja.cs" />
@@ -121,8 +163,29 @@
     <EmbeddedResource Include="Forme\FormaTest.resx">
       <DependentUpon>FormaTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\NemagijskaCudovistaForma.resx">
+      <DependentUpon>NemagijskaCudovistaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PredmetForma.resx">
+      <DependentUpon>PredmetForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PredstavnikForm.resx">
+      <DependentUpon>PredstavnikForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ProtivmereForma.resx">
+      <DependentUpon>ProtivmereForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SpecijalneSposobnosti.resx">
+      <DependentUpon>SpecijalneSposobnosti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\SvaNemagijskaCudovistaForma.resx">
       <DependentUpon>SvaNemagijskaCudovistaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZastitaForma.resx">
+      <DependentUpon>ZastitaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZiviNaForma.resx">
+      <DependentUpon>ZiviNaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
