@@ -10,7 +10,7 @@ namespace Cudovista.Entiteti
     {
         public virtual int ID { get; set; }
         public virtual int Id_lokacije { get; set; }
-        public virtual int Id_predstavnika { get; set; }
+        public virtual int Id_predstavnika { get; set; } // jel obo sigurno treba
         public virtual Predstavnik predstavnikZivi { get; set; }
         public virtual Lokacija lokacijaZivota { get; set; }
 

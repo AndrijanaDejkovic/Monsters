@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cudovista.Entiteti
 {
-    public class Zastita
+    public abstract class Zastita
     {
         public virtual int ID { get; set; }
         public virtual string Naziv_zastite { get; set; }
