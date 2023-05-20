@@ -834,7 +834,7 @@ namespace Cudovista
         #endregion Legende
 
         #region MagijskaCudovista
-        /*
+        
         public static List<MagijskoCudovistePregled> vratiSvaMagijskaCudovista()
         {
             
@@ -860,7 +860,7 @@ namespace Cudovista
 
             return cudovista;
         }
-        /*
+        
 
         public static void dodajMagijskoCudoviste(MagijskoCudovisteBasic p)
         {
@@ -888,7 +888,7 @@ namespace Cudovista
             }
         }
 
-        /*public static MagijskoCudovisteBasic azurirajMagijskoCudoviste(MagijskoCudovisteBasic p)
+      /*  public static MagijskoCudovisteBasic azurirajMagijskoCudoviste(MagijskoCudovisteBasic p)
         {
             try
             {
@@ -914,10 +914,10 @@ namespace Cudovista
             }
 
             return o;
-        }
-        */
+        }*/
+        
 
-        /*
+        
         public static MagijskoCudovisteBasic vratiMagijskoCudoviste(int id)
         {
             MagijskoCudovisteBasic pb = new MagijskoCudovisteBasic();
@@ -937,7 +937,7 @@ namespace Cudovista
 
             return pb;
         }
-        */
+        
         public static void obrisiMagijskoCudoviste(int id)
         {
             try

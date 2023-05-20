@@ -349,20 +349,20 @@ namespace Cudovista
     }
     public class MagijskoCudovistePregled : CudivistePregled
     {
-        //proveri
+        //okej je sa otkomentarisanom argumentima
         public int Da_li_postoji;
 
         public MagijskoCudovistePregled()
         {
 
         }
-        public MagijskoCudovistePregled(/*int id, string podtip, string naziv_cudovista, int vek,*/  int da_li_postoji)
+        public MagijskoCudovistePregled(int id, string podtip, string naziv_cudovista, int vek, int da_li_postoji)
         {
-            /*this.ID = id;
+            this.ID = id;
             this.Naziv_cudovista = naziv_cudovista;
             this.Podtip = podtip;
             this.Vek = vek;
-            */
+            
             this.Da_li_postoji = da_li_postoji;
 
         }
@@ -376,13 +376,13 @@ namespace Cudovista
         {
             Poseduje_sposobnosti = new List<Magijske_sposobnosti>();
         }
-        public MagijskoCudovisteBasic(/*int id, string podtip, string naziv_cudovista, int vek,*/ int da_li_postoji)
+        public MagijskoCudovisteBasic(int id, string podtip, string naziv_cudovista, int vek, int da_li_postoji)
         {
-            /*this.ID = id;
+            this.ID = id;
             this.Naziv_cudovista = naziv_cudovista;
             this.Podtip = podtip;
             this.Vek = vek;
-            */
+           
             this.Da_li_postoji = da_li_postoji;
 
         }
