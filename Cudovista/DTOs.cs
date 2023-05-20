@@ -924,78 +924,76 @@ namespace Cudovista
             {
             }
         }
-
-        public class KletvaBasic : ZastitaBasic
+    }
+    public class KletvaBasic : ZastitaBasic
+    {
+        public KletvaBasic()
         {
-            public KletvaBasic()
+
+        }
+        public KletvaBasic(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije) : base(ID, Naziv_zastite, Tip_zastite, Id_lokacije)
+
+        {
             {
-
-            }
-            public KletvaBasic(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije) : base(ID, Naziv_zastite, Tip_zastite, Id_lokacije)
-
-            {
-                {
-                }
-            }
-
-
-                public class ZastitaPregled
-                {
-                public int ID;
-                public string Naziv_zastite;
-
-                public string Tip_zastite;
-                public Lokacija Id_lokacije;
-
-
-                public ZastitaPregled()
-                    {
-                       
-
-                    }
-
-                    public ZastitaPregled(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije)
-                    {
-                    this.ID = ID;
-                    this.Naziv_zastite = Naziv_zastite;
-                    this.Tip_zastite = Tip_zastite;
-                    this.Id_lokacije = Id_lokacije;
-
-
-                }
-                public class KletvaPregled : ZastitaPregled
-                {
-
-                    public KletvaPregled(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije) : base(ID, Naziv_zastite, Tip_zastite, Id_lokacije)
-
-                    {
-                    }
-
-
-                }
-
-                public class DuhPregled : ZastitaPregled
-                {
-                    public DuhPregled(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije) : base(ID, Naziv_zastite, Tip_zastite, Id_lokacije)
-
-                    {
-                    }
-
-                }
-
-                public class ZmajPregled : ZastitaPregled
-                {
-                    public ZmajPregled(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije) : base(ID, Naziv_zastite, Tip_zastite, Id_lokacije)
-
-                    {
-                    }
-
-
-                }
-               
             }
         }
+
     }
+    public class ZastitaPregled
+    {
+        public int ID;
+        public string Naziv_zastite;
+
+        public string Tip_zastite;
+        public Lokacija Id_lokacije;
+
+
+        public ZastitaPregled()
+        {
+
+
+        }
+
+        public ZastitaPregled(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije)
+        {
+            this.ID = ID;
+            this.Naziv_zastite = Naziv_zastite;
+            this.Tip_zastite = Tip_zastite;
+            this.Id_lokacije = Id_lokacije;
+
+
+        }
+    }
+    public class KletvaPregled : ZastitaPregled
+    {
+
+        public KletvaPregled(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije) : base(ID, Naziv_zastite, Tip_zastite, Id_lokacije)
+
+        {
+        }
+
+
+    }
+
+    public class DuhPregled : ZastitaPregled
+    {
+        public DuhPregled(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije) : base(ID, Naziv_zastite, Tip_zastite, Id_lokacije)
+
+        {
+        }
+
+    }
+
+    public class ZmajPregled : ZastitaPregled
+    {
+        public ZmajPregled(int ID, string Naziv_zastite, string Tip_zastite, Lokacija Id_lokacije) : base(ID, Naziv_zastite, Tip_zastite, Id_lokacije)
+
+        {
+        }
+
+
+    }
+  
 
     public class ZiviNaPregled
     {

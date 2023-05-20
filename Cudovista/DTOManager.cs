@@ -13,7 +13,8 @@ using NHibernate.Mapping;
 using static Cudovista.PiramidaBasic.GradDuhovaBasic.PecinaBasic;
 using static Cudovista.PiramidaBasic;
 using static Cudovista.PiramidaBasic.GradDuhovaBasic;
-using static Cudovista.ZmajBasic.KletvaBasic.ZastitaPregled;
+using static Cudovista.ZmajBasic;
+using static Cudovista.KletvaBasic;
 
 namespace Cudovista
 {
@@ -258,6 +259,7 @@ namespace Cudovista
 
         #region Predmet
 
+
         #region Krst
         public static void obrisiPredmet(int id)
         {
@@ -310,9 +312,9 @@ namespace Cudovista
             return o;
 
         }
-        public static List<PredmetBasic> GetOdInfos(int CudovisteId)
+        public static List<PredmetPregled> vratiPredmeteJednogOdeljenja(int CudovisteId)
         {
-            List<PredmetBasic> odInfos = new List<PredmetBasic>();
+            List<PredmetPregled> odInfos = new List<PredmetPregled>();
             try
             {
                 ISession s = DataLayer.GetSession();
@@ -323,7 +325,7 @@ namespace Cudovista
 
                 foreach (Predmet o in predmeti)
                 {
-                    odInfos.Add(new PredmetBasic(o.ID, o.Id_cudovista, o.ID_Materijala, o.Tip_Predmeta));
+                    odInfos.Add(new PredmetPregled(o.ID, o.Id_cudovista, o.ID_Materijala, o.Tip_Predmeta));
                 }
 
                 s.Close();
@@ -2846,9 +2848,9 @@ namespace Cudovista
             return o;
 
         }
-        public static List<ZastitaBasic> GetZastitaInfos(int id)
+        public static List<ZastitaPregled> VratiSveZastiteJednogPredmeta(int id)
         {
-            List<ZastitaBasic> odInfos = new List<ZastitaBasic>();
+            List<ZastitaPregled> odInfos = new List<ZastitaPregled>();
             try
             {
                 ISession s = DataLayer.GetSession();
@@ -2859,7 +2861,7 @@ namespace Cudovista
 
                 foreach (Zastita o in lokacije)
                 {
-                    odInfos.Add(new ZastitaBasic(o.ID, o.Naziv_zastite, o.Tip_zastite, o.Id_lokacije));
+                    odInfos.Add(new ZastitaPregled(o.ID, o.Naziv_zastite, o.Tip_zastite, o.Id_lokacije));
                 }
 
                 s.Close();
