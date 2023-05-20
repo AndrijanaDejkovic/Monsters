@@ -31,12 +31,14 @@ namespace Cudovista
 
         private void btnCudovista2_Click(object sender, EventArgs e)
         {
-
+            CudovisteForma forma = new CudovisteForma();
+            forma.ShowDialog();
         }
 
         private void btnPredstavnici2_Click(object sender, EventArgs e)
         {
-
+            PredstavnikForm forma= new PredstavnikForm();
+            forma.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)

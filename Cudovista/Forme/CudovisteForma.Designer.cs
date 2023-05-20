@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.Lista_Cudovista = new System.Windows.Forms.GroupBox();
-            this.btnDodajCudoviste = new System.Windows.Forms.Button();
             this.listaCudovista = new System.Windows.Forms.ListView();
+            this.btnDodajCudoviste = new System.Windows.Forms.Button();
             this.Lista_Cudovista.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +45,15 @@
             this.Lista_Cudovista.Text = "Lista_Cudovista";
             this.Lista_Cudovista.Enter += new System.EventHandler(this.Lista_Cudovista_Enter);
             // 
+            // listaCudovista
+            // 
+            this.listaCudovista.HideSelection = false;
+            this.listaCudovista.Location = new System.Drawing.Point(63, 72);
+            this.listaCudovista.Name = "listaCudovista";
+            this.listaCudovista.Size = new System.Drawing.Size(830, 506);
+            this.listaCudovista.TabIndex = 0;
+            this.listaCudovista.UseCompatibleStateImageBehavior = false;
+            // 
             // btnDodajCudoviste
             // 
             this.btnDodajCudoviste.Location = new System.Drawing.Point(1041, 57);
@@ -54,15 +63,6 @@
             this.btnDodajCudoviste.Text = "Dodaj Cudoviste";
             this.btnDodajCudoviste.UseVisualStyleBackColor = true;
             this.btnDodajCudoviste.Click += new System.EventHandler(this.btnDodajCudoviste_Click);
-            // 
-            // listaCudovista
-            // 
-            this.listaCudovista.HideSelection = false;
-            this.listaCudovista.Location = new System.Drawing.Point(63, 72);
-            this.listaCudovista.Name = "listaCudovista";
-            this.listaCudovista.Size = new System.Drawing.Size(449, 242);
-            this.listaCudovista.TabIndex = 0;
-            this.listaCudovista.UseCompatibleStateImageBehavior = false;
             // 
             // CudovisteForma
             // 
