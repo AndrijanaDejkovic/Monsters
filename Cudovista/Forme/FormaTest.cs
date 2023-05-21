@@ -42,12 +42,13 @@ namespace Cudovista.Forme
         {
             try
             {
+                //OVO JE ZA CUDOVISTE
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Bajalice p = s.Get<Cudovista.Entiteti.Bajalice>(1);
+                Cudovista.Entiteti.Cudoviste p = s.Get<Cudovista.Entiteti.Cudoviste>(3);
 
-                MessageBox.Show(p.Bajalica);
+                MessageBox.Show(p.Naziv_cudovista);
 
                 s.Close();
             }

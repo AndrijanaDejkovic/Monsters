@@ -76,6 +76,12 @@
     <Compile Include="Forme\CudovisteForma.Designer.cs">
       <DependentUpon>CudovisteForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\CudovisteUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\CudovisteUpdateForm.Designer.cs">
+      <DependentUpon>CudovisteUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\DodajCudoviste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\CudovisteForma.resx">
       <DependentUpon>CudovisteForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\CudovisteUpdateForm.resx">
+      <DependentUpon>CudovisteUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajCudoviste.resx">
       <DependentUpon>DodajCudoviste.cs</DependentUpon>

@@ -36,11 +36,12 @@
             this.lblPodtip = new System.Windows.Forms.Label();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.txtPostojiLI = new System.Windows.Forms.TextBox();
+            this.lblDaLi = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNazivCudovista
             // 
-            this.txtNazivCudovista.Location = new System.Drawing.Point(198, 112);
+            this.txtNazivCudovista.Location = new System.Drawing.Point(198, 53);
             this.txtNazivCudovista.Name = "txtNazivCudovista";
             this.txtNazivCudovista.Size = new System.Drawing.Size(226, 29);
             this.txtNazivCudovista.TabIndex = 0;
@@ -48,7 +49,7 @@
             // lblNazivCudovista
             // 
             this.lblNazivCudovista.AutoSize = true;
-            this.lblNazivCudovista.Location = new System.Drawing.Point(38, 115);
+            this.lblNazivCudovista.Location = new System.Drawing.Point(38, 57);
             this.lblNazivCudovista.Name = "lblNazivCudovista";
             this.lblNazivCudovista.Size = new System.Drawing.Size(154, 25);
             this.lblNazivCudovista.TabIndex = 1;
@@ -56,15 +57,15 @@
             // 
             // txtVek
             // 
-            this.txtVek.Location = new System.Drawing.Point(249, 209);
+            this.txtVek.Location = new System.Drawing.Point(249, 101);
             this.txtVek.Name = "txtVek";
             this.txtVek.Size = new System.Drawing.Size(175, 29);
             this.txtVek.TabIndex = 2;
-            this.txtVek.Text = "number only";
+            this.txtVek.Text = "2";
             // 
             // txtPodtip
             // 
-            this.txtPodtip.Location = new System.Drawing.Point(248, 278);
+            this.txtPodtip.Location = new System.Drawing.Point(249, 166);
             this.txtPodtip.Name = "txtPodtip";
             this.txtPodtip.Size = new System.Drawing.Size(191, 29);
             this.txtPodtip.TabIndex = 3;
@@ -72,7 +73,7 @@
             // lblVek
             // 
             this.lblVek.AutoSize = true;
-            this.lblVek.Location = new System.Drawing.Point(38, 213);
+            this.lblVek.Location = new System.Drawing.Point(38, 115);
             this.lblVek.Name = "lblVek";
             this.lblVek.Size = new System.Drawing.Size(180, 25);
             this.lblVek.TabIndex = 4;
@@ -81,7 +82,7 @@
             // lblPodtip
             // 
             this.lblPodtip.AutoSize = true;
-            this.lblPodtip.Location = new System.Drawing.Point(92, 278);
+            this.lblPodtip.Location = new System.Drawing.Point(92, 194);
             this.lblPodtip.Name = "lblPodtip";
             this.lblPodtip.Size = new System.Drawing.Size(67, 25);
             this.lblPodtip.TabIndex = 5;
@@ -100,16 +101,28 @@
             // 
             // txtPostojiLI
             // 
-            this.txtPostojiLI.Location = new System.Drawing.Point(291, 340);
+            this.txtPostojiLI.Location = new System.Drawing.Point(297, 244);
             this.txtPostojiLI.Name = "txtPostojiLI";
             this.txtPostojiLI.Size = new System.Drawing.Size(100, 29);
             this.txtPostojiLI.TabIndex = 7;
+            this.txtPostojiLI.Text = "0";
+            // 
+            // lblDaLi
+            // 
+            this.lblDaLi.AutoSize = true;
+            this.lblDaLi.Location = new System.Drawing.Point(92, 247);
+            this.lblDaLi.Name = "lblDaLi";
+            this.lblDaLi.Size = new System.Drawing.Size(111, 25);
+            this.lblDaLi.TabIndex = 8;
+            this.lblDaLi.Text = "Da li postoji";
             // 
             // DodajCudoviste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1075, 592);
+            this.Controls.Add(this.lblDaLi);
             this.Controls.Add(this.txtPostojiLI);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.lblPodtip);
@@ -135,5 +148,6 @@
         private System.Windows.Forms.Label lblPodtip;
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.TextBox txtPostojiLI;
+        private System.Windows.Forms.Label lblDaLi;
     }
 }

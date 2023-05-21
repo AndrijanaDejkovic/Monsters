@@ -46,5 +46,11 @@ namespace Cudovista
             SvaNemagijskaCudovistaForma forma = new SvaNemagijskaCudovistaForma();
             forma.ShowDialog();
         }
+
+        private void btnTestiranje_Click(object sender, EventArgs e)
+        {
+            FormaTest forma = new FormaTest();
+            forma.ShowDialog();
+        }
     }
 }

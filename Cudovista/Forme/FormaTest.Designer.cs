@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.findNameCudoviste = new System.Windows.Forms.Button();
             this.findBajalica = new System.Windows.Forms.Button();
             this.findLegende = new System.Windows.Forms.Button();
@@ -40,25 +39,15 @@
             this.Materijal = new System.Windows.Forms.Button();
             this.Predmet = new System.Windows.Forms.Button();
             this.Zastita = new System.Windows.Forms.Button();
-            this.Lokacija = new System.Windows.Forms.Button();
             this.ZiviNa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(52, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // findNameCudoviste
             // 
-            this.findNameCudoviste.Location = new System.Drawing.Point(70, 130);
+            this.findNameCudoviste.Location = new System.Drawing.Point(125, 113);
+            this.findNameCudoviste.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.findNameCudoviste.Name = "findNameCudoviste";
-            this.findNameCudoviste.Size = new System.Drawing.Size(123, 23);
+            this.findNameCudoviste.Size = new System.Drawing.Size(226, 42);
             this.findNameCudoviste.TabIndex = 1;
             this.findNameCudoviste.Text = "findNameCudoviste";
             this.findNameCudoviste.UseVisualStyleBackColor = true;
@@ -67,9 +56,10 @@
             // findBajalica
             // 
             this.findBajalica.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.findBajalica.Location = new System.Drawing.Point(78, 194);
+            this.findBajalica.Location = new System.Drawing.Point(125, 179);
+            this.findBajalica.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.findBajalica.Name = "findBajalica";
-            this.findBajalica.Size = new System.Drawing.Size(75, 23);
+            this.findBajalica.Size = new System.Drawing.Size(226, 42);
             this.findBajalica.TabIndex = 2;
             this.findBajalica.Text = "findBajalica";
             this.findBajalica.UseVisualStyleBackColor = true;
@@ -77,9 +67,10 @@
             // 
             // findLegende
             // 
-            this.findLegende.Location = new System.Drawing.Point(68, 287);
+            this.findLegende.Location = new System.Drawing.Point(125, 254);
+            this.findLegende.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.findLegende.Name = "findLegende";
-            this.findLegende.Size = new System.Drawing.Size(74, 27);
+            this.findLegende.Size = new System.Drawing.Size(226, 50);
             this.findLegende.TabIndex = 3;
             this.findLegende.Text = "findLegende";
             this.findLegende.UseVisualStyleBackColor = true;
@@ -87,9 +78,10 @@
             // 
             // findNemagijsko
             // 
-            this.findNemagijsko.Location = new System.Drawing.Point(68, 376);
+            this.findNemagijsko.Location = new System.Drawing.Point(125, 332);
+            this.findNemagijsko.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.findNemagijsko.Name = "findNemagijsko";
-            this.findNemagijsko.Size = new System.Drawing.Size(115, 27);
+            this.findNemagijsko.Size = new System.Drawing.Size(226, 50);
             this.findNemagijsko.TabIndex = 4;
             this.findNemagijsko.Text = "findNemagijsko";
             this.findNemagijsko.UseVisualStyleBackColor = true;
@@ -97,9 +89,10 @@
             // 
             // findProtivmera
             // 
-            this.findProtivmera.Location = new System.Drawing.Point(333, 45);
+            this.findProtivmera.Location = new System.Drawing.Point(386, 179);
+            this.findProtivmera.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.findProtivmera.Name = "findProtivmera";
-            this.findProtivmera.Size = new System.Drawing.Size(75, 23);
+            this.findProtivmera.Size = new System.Drawing.Size(165, 42);
             this.findProtivmera.TabIndex = 5;
             this.findProtivmera.Text = "findProtivmera";
             this.findProtivmera.UseVisualStyleBackColor = true;
@@ -107,9 +100,10 @@
             // 
             // findSpecSposobnost
             // 
-            this.findSpecSposobnost.Location = new System.Drawing.Point(280, 142);
+            this.findSpecSposobnost.Location = new System.Drawing.Point(125, 425);
+            this.findSpecSposobnost.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.findSpecSposobnost.Name = "findSpecSposobnost";
-            this.findSpecSposobnost.Size = new System.Drawing.Size(75, 23);
+            this.findSpecSposobnost.Size = new System.Drawing.Size(226, 42);
             this.findSpecSposobnost.TabIndex = 6;
             this.findSpecSposobnost.Text = "findSpecSposobnost";
             this.findSpecSposobnost.UseVisualStyleBackColor = true;
@@ -117,9 +111,10 @@
             // 
             // findLovac
             // 
-            this.findLovac.Location = new System.Drawing.Point(236, 242);
+            this.findLovac.Location = new System.Drawing.Point(125, 495);
+            this.findLovac.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.findLovac.Name = "findLovac";
-            this.findLovac.Size = new System.Drawing.Size(75, 23);
+            this.findLovac.Size = new System.Drawing.Size(226, 42);
             this.findLovac.TabIndex = 7;
             this.findLovac.Text = "findLovac";
             this.findLovac.UseVisualStyleBackColor = true;
@@ -127,9 +122,10 @@
             // 
             // findMagijsko
             // 
-            this.findMagijsko.Location = new System.Drawing.Point(221, 347);
+            this.findMagijsko.Location = new System.Drawing.Point(386, 112);
+            this.findMagijsko.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.findMagijsko.Name = "findMagijsko";
-            this.findMagijsko.Size = new System.Drawing.Size(90, 29);
+            this.findMagijsko.Size = new System.Drawing.Size(165, 45);
             this.findMagijsko.TabIndex = 8;
             this.findMagijsko.Text = "findMagijsko";
             this.findMagijsko.UseVisualStyleBackColor = true;
@@ -137,9 +133,10 @@
             // 
             // Materijal
             // 
-            this.Materijal.Location = new System.Drawing.Point(457, 167);
+            this.Materijal.Location = new System.Drawing.Point(386, 332);
+            this.Materijal.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Materijal.Name = "Materijal";
-            this.Materijal.Size = new System.Drawing.Size(75, 23);
+            this.Materijal.Size = new System.Drawing.Size(165, 42);
             this.Materijal.TabIndex = 9;
             this.Materijal.Text = "Materijal";
             this.Materijal.UseVisualStyleBackColor = true;
@@ -147,9 +144,10 @@
             // 
             // Predmet
             // 
-            this.Predmet.Location = new System.Drawing.Point(427, 268);
+            this.Predmet.Location = new System.Drawing.Point(404, 425);
+            this.Predmet.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Predmet.Name = "Predmet";
-            this.Predmet.Size = new System.Drawing.Size(75, 23);
+            this.Predmet.Size = new System.Drawing.Size(147, 42);
             this.Predmet.TabIndex = 10;
             this.Predmet.Text = "Predmet";
             this.Predmet.UseVisualStyleBackColor = true;
@@ -157,29 +155,21 @@
             // 
             // Zastita
             // 
-            this.Zastita.Location = new System.Drawing.Point(382, 373);
+            this.Zastita.Location = new System.Drawing.Point(404, 495);
+            this.Zastita.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Zastita.Name = "Zastita";
-            this.Zastita.Size = new System.Drawing.Size(75, 23);
+            this.Zastita.Size = new System.Drawing.Size(147, 42);
             this.Zastita.TabIndex = 11;
             this.Zastita.Text = "Zastita";
             this.Zastita.UseVisualStyleBackColor = true;
             this.Zastita.Click += new System.EventHandler(this.Zastita_Click);
             // 
-            // Lokacija
-            // 
-            this.Lokacija.Location = new System.Drawing.Point(618, 175);
-            this.Lokacija.Name = "Lokacija";
-            this.Lokacija.Size = new System.Drawing.Size(75, 23);
-            this.Lokacija.TabIndex = 12;
-            this.Lokacija.Text = "Lokacija";
-            this.Lokacija.UseVisualStyleBackColor = true;
-            this.Lokacija.Click += new System.EventHandler(this.Lokacija_Click);
-            // 
             // ZiviNa
             // 
-            this.ZiviNa.Location = new System.Drawing.Point(537, 354);
+            this.ZiviNa.Location = new System.Drawing.Point(386, 258);
+            this.ZiviNa.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ZiviNa.Name = "ZiviNa";
-            this.ZiviNa.Size = new System.Drawing.Size(75, 23);
+            this.ZiviNa.Size = new System.Drawing.Size(165, 42);
             this.ZiviNa.TabIndex = 13;
             this.ZiviNa.Text = "ZiviNa";
             this.ZiviNa.UseVisualStyleBackColor = true;
@@ -187,11 +177,11 @@
             // 
             // FormaTest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1467, 831);
             this.Controls.Add(this.ZiviNa);
-            this.Controls.Add(this.Lokacija);
             this.Controls.Add(this.Zastita);
             this.Controls.Add(this.Predmet);
             this.Controls.Add(this.Materijal);
@@ -203,7 +193,7 @@
             this.Controls.Add(this.findLegende);
             this.Controls.Add(this.findBajalica);
             this.Controls.Add(this.findNameCudoviste);
-            this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "FormaTest";
             this.Text = "FormaTest";
             this.ResumeLayout(false);
@@ -211,8 +201,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button findNameCudoviste;
         private System.Windows.Forms.Button findBajalica;
         private System.Windows.Forms.Button findLegende;
@@ -224,7 +212,6 @@
         private System.Windows.Forms.Button Materijal;
         private System.Windows.Forms.Button Predmet;
         private System.Windows.Forms.Button Zastita;
-        private System.Windows.Forms.Button Lokacija;
         private System.Windows.Forms.Button ZiviNa;
     }
 }

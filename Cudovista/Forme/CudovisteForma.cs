@@ -47,5 +47,83 @@ namespace Cudovista.Forme
             this.popuniPodacima();
 
         }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            if (listaCudovista.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite cudoviste koju zelite da obrisete!");
+                return;
+            }
+
+            int idCudovista = Int32.Parse(listaCudovista.SelectedItems[0].SubItems[0].Text);
+            string poruka = "Da li zelite da obrisete izabrano cudoviste?";
+            string title = "Pitanje";
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            DialogResult result = MessageBox.Show(poruka, title, buttons);
+
+            if (result == DialogResult.OK)
+            {
+                DTOManager.obrisiMagijskoCudoviste(idCudovista);
+                MessageBox.Show("Brisanje cudovista je uspesno obavljeno!");
+                this.popuniPodacima();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void CudovisteForma_Load(object sender, EventArgs e)
+        {
+            popuniPodacima();
+        }
+
+        private void btnIzmeni_Click(object sender, EventArgs e)
+        {
+            if (listaCudovista.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite prodavnicu cije podatke zelite da izmenite!");
+                return;
+            }
+
+            int idProdavnice = Int32.Parse(listaCudovista.SelectedItems[0].SubItems[0].Text);
+            MagijskoCudovisteBasic ob = DTOManager.vratiMagijskoCudoviste(idProdavnice);
+
+            CudovisteUpdateForm formaUpdate = new CudovisteUpdateForm(ob);
+            formaUpdate.ShowDialog();
+
+            this.popuniPodacima();
+        }
+
+     /*   private void listaCudovista_Click(object sender, EventArgs e)
+        {
+            if (listaCudovista.SelectedIndices.Count > 0)
+            {
+                int selectedIndex = listaCudovista.SelectedIndices[0];
+
+                // Access the selected item using the index
+                ListViewItem selectedItem = listaCudovista.Items[selectedIndex];
+
+                // Do something with the selected item
+                // For example, you can display its text in a MessageBox
+                MessageBox.Show(selectedItem.Text);
+            }
+        }
+
+        private void listaCudovista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listaCudovista.SelectedIndices.Count > 0)
+            {
+                int selectedIndex = listaCudovista.SelectedIndices[0];
+
+                // Access the selected item using the index
+                ListViewItem selectedItem = listaCudovista.Items[selectedIndex];
+
+                // Do something with the selected item
+                // For example, you can display its text in a MessageBox
+                MessageBox.Show(selectedItem.Text);
+            }
+        }*/
     }
 }

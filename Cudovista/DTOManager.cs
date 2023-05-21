@@ -890,13 +890,13 @@ namespace Cudovista
             }
         }
 
-      /*  public static MagijskoCudovisteBasic azurirajMagijskoCudoviste(MagijskoCudovisteBasic p)
+        public static MagijskoCudovisteBasic azurirajMagijskoCudoviste(MagijskoCudovisteBasic p)
         {
             try
             {
                 ISession s = DataLayer.GetSession();
 
-                Cudovista.Entiteti.Magijsko_cudoviste p = s.Load<Cudovista.Entiteti.Magijsko_cudoviste>(p.Id_magijskog);
+                Cudovista.Entiteti.Magijsko_cudoviste o= s.Load<Cudovista.Entiteti.Magijsko_cudoviste>(p.ID);
 
                 o.ID = p.ID;
                 o.Naziv_cudovista = p.Naziv_cudovista;
@@ -915,8 +915,8 @@ namespace Cudovista
                 //handle exceptions
             }
 
-            return o;
-        }*/
+            return p;
+        }
         
 
         

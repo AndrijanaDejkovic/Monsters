@@ -31,6 +31,13 @@
             this.Lista_Cudovista = new System.Windows.Forms.GroupBox();
             this.listaCudovista = new System.Windows.Forms.ListView();
             this.btnDodajCudoviste = new System.Windows.Forms.Button();
+            this.btnObrisi = new System.Windows.Forms.Button();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Naziv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Vek = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Podtip = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Da_li_postoji = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnIzmeni = new System.Windows.Forms.Button();
             this.Lista_Cudovista.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,12 +54,23 @@
             // 
             // listaCudovista
             // 
+            this.listaCudovista.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.Naziv,
+            this.Vek,
+            this.Podtip,
+            this.Da_li_postoji});
             this.listaCudovista.HideSelection = false;
-            this.listaCudovista.Location = new System.Drawing.Point(63, 72);
+            this.listaCudovista.Location = new System.Drawing.Point(11, 46);
+            this.listaCudovista.Margin = new System.Windows.Forms.Padding(6);
             this.listaCudovista.Name = "listaCudovista";
-            this.listaCudovista.Size = new System.Drawing.Size(830, 506);
-            this.listaCudovista.TabIndex = 0;
+            this.listaCudovista.Size = new System.Drawing.Size(925, 576);
+            this.listaCudovista.TabIndex = 4;
+            this.listaCudovista.TileSize = new System.Drawing.Size(320, 52);
             this.listaCudovista.UseCompatibleStateImageBehavior = false;
+            this.listaCudovista.View = System.Windows.Forms.View.Details;
+            this.listaCudovista.SelectedIndexChanged += new System.EventHandler(this.btnObrisi_Click);
+           // this.listaCudovista.Click += new System.EventHandler(this.listaCudovista_Click);
             // 
             // btnDodajCudoviste
             // 
@@ -64,15 +82,62 @@
             this.btnDodajCudoviste.UseVisualStyleBackColor = true;
             this.btnDodajCudoviste.Click += new System.EventHandler(this.btnDodajCudoviste_Click);
             // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(1041, 161);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(185, 46);
+            this.btnObrisi.TabIndex = 1;
+            this.btnObrisi.Text = "Obrisi ";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 57;
+            // 
+            // Naziv
+            // 
+            this.Naziv.Text = "Naziv";
+            // 
+            // Vek
+            // 
+            this.Vek.Text = "Vek";
+            // 
+            // Podtip
+            // 
+            this.Podtip.Text = "Podtip";
+            this.Podtip.Width = 86;
+            // 
+            // Da_li_postoji
+            // 
+            this.Da_li_postoji.Text = "Da_li_postoji";
+            this.Da_li_postoji.Width = 227;
+            // 
+            // btnIzmeni
+            // 
+            this.btnIzmeni.Location = new System.Drawing.Point(1094, 276);
+            this.btnIzmeni.Name = "btnIzmeni";
+            this.btnIzmeni.Size = new System.Drawing.Size(116, 58);
+            this.btnIzmeni.TabIndex = 2;
+            this.btnIzmeni.Text = "Izmeni";
+            this.btnIzmeni.UseVisualStyleBackColor = true;
+            this.btnIzmeni.Click += new System.EventHandler(this.btnIzmeni_Click);
+            // 
             // CudovisteForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1354, 660);
+            this.Controls.Add(this.btnIzmeni);
+            this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnDodajCudoviste);
             this.Controls.Add(this.Lista_Cudovista);
             this.Name = "CudovisteForma";
             this.Text = "CudovisteForma";
+            this.Load += new System.EventHandler(this.CudovisteForma_Load);
             this.Lista_Cudovista.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -83,5 +148,12 @@
         private System.Windows.Forms.GroupBox Lista_Cudovista;
         private System.Windows.Forms.Button btnDodajCudoviste;
         private System.Windows.Forms.ListView listaCudovista;
+        private System.Windows.Forms.Button btnObrisi;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader Naziv;
+        private System.Windows.Forms.ColumnHeader Vek;
+        private System.Windows.Forms.ColumnHeader Podtip;
+        private System.Windows.Forms.ColumnHeader Da_li_postoji;
+        private System.Windows.Forms.Button btnIzmeni;
     }
 }
