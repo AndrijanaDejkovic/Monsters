@@ -106,7 +106,7 @@ namespace Cudovista
         }
     }
 
-    public class NemagijskoCudovisteBasic
+    public class NemagijskoCudovisteBasic : CudivisteBasic
     {
         public int ID_Nemagijskog;
         public int Da_li_zivi_u_vodi;
@@ -125,8 +125,9 @@ namespace Cudovista
         {
 
         }
-        public NemagijskoCudovisteBasic(int id_Nemagijskog, int da_li_zivi_u_vodi, int da_li_leti, int da_li_ima_rep, int da_li_je_otrovno, int da_li_ima_kandze, int broj_ociju, int broj_glava, int broj_ekstremiteta, int tezina, int duzina)
+        public NemagijskoCudovisteBasic(int ID, string Naziv, int Vek, string Podtip, int id_Nemagijskog, int da_li_zivi_u_vodi, int da_li_leti, int da_li_ima_rep, int da_li_je_otrovno, int da_li_ima_kandze, int broj_ociju, int broj_glava, int broj_ekstremiteta, int tezina, int duzina)
         {
+            this.ID = ID;
             this.ID_Nemagijskog = id_Nemagijskog;
             this.Da_li_zivi_u_vodi = da_li_zivi_u_vodi;
             this.Da_li_leti = da_li_leti;
@@ -138,7 +139,11 @@ namespace Cudovista
             this.Broj_ekstremiteta = broj_ekstremiteta;
             this.Duzina = duzina;
             this.Tezina = tezina;
+            this.Vek = Vek;
+            this.Podtip = Podtip;
+            this.Naziv_cudovista = Naziv;
         }
+        
 
     }
 
@@ -280,7 +285,7 @@ namespace Cudovista
         public string Naziv_cudovista;
         public string Podtip;
         public IList<Protivmere> Protivmere;
-        //  public virtual IList<Predmet> Predmeti { get; set; }
+        public virtual IList<Predmet> Predmeti { get; set; }
         public IList<Predstavnik> Predstavnici;
         public IList<Legende> Legende;
         public IList<Bajalice> Bajalice;
@@ -288,6 +293,7 @@ namespace Cudovista
         {
             Predstavnici = new List<Predstavnik>();
             Legende = new List<Legende>();
+            Predmeti = new List<Predmet>();
             Bajalice = new List<Bajalice>();
             Protivmere = new List<Protivmere>();
         }

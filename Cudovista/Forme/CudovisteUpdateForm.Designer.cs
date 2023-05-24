@@ -51,7 +51,7 @@
             this.Naziv.AutoSize = true;
             this.Naziv.Location = new System.Drawing.Point(113, 105);
             this.Naziv.Name = "Naziv";
-            this.Naziv.Size = new System.Drawing.Size(107, 44);
+            this.Naziv.Size = new System.Drawing.Size(61, 25);
             this.Naziv.TabIndex = 1;
             this.Naziv.Text = "Naziv";
             this.Naziv.Click += new System.EventHandler(this.label1_Click);
@@ -68,7 +68,7 @@
             this.Vek.AutoSize = true;
             this.Vek.Location = new System.Drawing.Point(113, 176);
             this.Vek.Name = "Vek";
-            this.Vek.Size = new System.Drawing.Size(82, 44);
+            this.Vek.Size = new System.Drawing.Size(47, 25);
             this.Vek.TabIndex = 3;
             this.Vek.Text = "Vek";
             // 
@@ -107,7 +107,7 @@
             // 
             // btnAzuriraj
             // 
-            this.btnAzuriraj.Location = new System.Drawing.Point(837, 126);
+            this.btnAzuriraj.Location = new System.Drawing.Point(164, 386);
             this.btnAzuriraj.Name = "btnAzuriraj";
             this.btnAzuriraj.Size = new System.Drawing.Size(112, 44);
             this.btnAzuriraj.TabIndex = 8;

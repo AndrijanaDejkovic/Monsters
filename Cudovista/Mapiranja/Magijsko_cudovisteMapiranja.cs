@@ -13,7 +13,7 @@ namespace Cudovista.Mapiranja
         {
             Table("MAGIJSKO_CUDOVISTE");
 
-            KeyColumn("ID_MAGIJSKOG");
+            KeyColumn("ID");
 
             Map(x => x.Da_li_postoji).Column("DA_LI_POSTOJI");
 

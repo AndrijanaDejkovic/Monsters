@@ -30,13 +30,13 @@
         {
             this.Lista_Cudovista = new System.Windows.Forms.GroupBox();
             this.listaCudovista = new System.Windows.Forms.ListView();
-            this.btnDodajCudoviste = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Naziv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Vek = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Podtip = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Da_li_postoji = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnDodajCudoviste = new System.Windows.Forms.Button();
+            this.btnObrisi = new System.Windows.Forms.Button();
             this.btnIzmeni = new System.Windows.Forms.Button();
             this.Lista_Cudovista.SuspendLayout();
             this.SuspendLayout();
@@ -70,27 +70,6 @@
             this.listaCudovista.UseCompatibleStateImageBehavior = false;
             this.listaCudovista.View = System.Windows.Forms.View.Details;
             this.listaCudovista.SelectedIndexChanged += new System.EventHandler(this.btnObrisi_Click);
-           // this.listaCudovista.Click += new System.EventHandler(this.listaCudovista_Click);
-            // 
-            // btnDodajCudoviste
-            // 
-            this.btnDodajCudoviste.Location = new System.Drawing.Point(1041, 57);
-            this.btnDodajCudoviste.Name = "btnDodajCudoviste";
-            this.btnDodajCudoviste.Size = new System.Drawing.Size(185, 74);
-            this.btnDodajCudoviste.TabIndex = 0;
-            this.btnDodajCudoviste.Text = "Dodaj Cudoviste";
-            this.btnDodajCudoviste.UseVisualStyleBackColor = true;
-            this.btnDodajCudoviste.Click += new System.EventHandler(this.btnDodajCudoviste_Click);
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(1041, 161);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(185, 46);
-            this.btnObrisi.TabIndex = 1;
-            this.btnObrisi.Text = "Obrisi ";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // columnHeader1
             // 
@@ -115,11 +94,31 @@
             this.Da_li_postoji.Text = "Da_li_postoji";
             this.Da_li_postoji.Width = 227;
             // 
+            // btnDodajCudoviste
+            // 
+            this.btnDodajCudoviste.Location = new System.Drawing.Point(822, 117);
+            this.btnDodajCudoviste.Name = "btnDodajCudoviste";
+            this.btnDodajCudoviste.Size = new System.Drawing.Size(169, 60);
+            this.btnDodajCudoviste.TabIndex = 0;
+            this.btnDodajCudoviste.Text = "Dodaj Cudoviste";
+            this.btnDodajCudoviste.UseVisualStyleBackColor = true;
+            this.btnDodajCudoviste.Click += new System.EventHandler(this.btnDodajCudoviste_Click);
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(822, 183);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(169, 46);
+            this.btnObrisi.TabIndex = 1;
+            this.btnObrisi.Text = "Obrisi ";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
             // btnIzmeni
             // 
-            this.btnIzmeni.Location = new System.Drawing.Point(1094, 276);
+            this.btnIzmeni.Location = new System.Drawing.Point(822, 249);
             this.btnIzmeni.Name = "btnIzmeni";
-            this.btnIzmeni.Size = new System.Drawing.Size(116, 58);
+            this.btnIzmeni.Size = new System.Drawing.Size(169, 46);
             this.btnIzmeni.TabIndex = 2;
             this.btnIzmeni.Text = "Izmeni";
             this.btnIzmeni.UseVisualStyleBackColor = true;

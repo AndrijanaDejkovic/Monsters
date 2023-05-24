@@ -15,6 +15,10 @@ namespace Cudovista.Forme
         MagijskoCudovisteBasic cudoviste;
         CudivisteBasic c;
         
+        private void lblPodtip_Click(object sender, EventArgs e)
+        {
+
+        }
         
         public DodajCudoviste()
         {
@@ -22,13 +26,7 @@ namespace Cudovista.Forme
             cudoviste = new MagijskoCudovisteBasic();
             c= new CudivisteBasic();
         }
-      
-
-        private void lblPodtip_Click(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void button1_Click(object sender, EventArgs e)
         {
             string poruka = "Da li zelite da dodate ovo cudoviste?";

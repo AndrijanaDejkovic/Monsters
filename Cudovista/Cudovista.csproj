@@ -94,6 +94,12 @@
     <Compile Include="Forme\DodajLokaciju.Designer.cs">
       <DependentUpon>DodajLokaciju.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\DodajNemagijsko.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajNemagijsko.Designer.cs">
+      <DependentUpon>DodajNemagijsko.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormaTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     </Compile>
     <Compile Include="Forme\NemagijskaCudovistaForma.Designer.cs">
       <DependentUpon>NemagijskaCudovistaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\NemagijskaUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\NemagijskaUpdateForm.Designer.cs">
+      <DependentUpon>NemagijskaUpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\PredmetForma.cs">
       <SubType>Form</SubType>
@@ -181,11 +193,17 @@
     <EmbeddedResource Include="Forme\DodajLokaciju.resx">
       <DependentUpon>DodajLokaciju.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajNemagijsko.resx">
+      <DependentUpon>DodajNemagijsko.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormaTest.resx">
       <DependentUpon>FormaTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\NemagijskaCudovistaForma.resx">
       <DependentUpon>NemagijskaCudovistaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\NemagijskaUpdateForm.resx">
+      <DependentUpon>NemagijskaUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\PredmetForma.resx">
       <DependentUpon>PredmetForma.cs</DependentUpon>

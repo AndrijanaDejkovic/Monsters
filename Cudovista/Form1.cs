@@ -52,5 +52,11 @@ namespace Cudovista
             FormaTest forma = new FormaTest();
             forma.ShowDialog();
         }
+
+        private void btnNemagijska_Click(object sender, EventArgs e)
+        {
+            NemagijskaCudovistaForma forma = new NemagijskaCudovistaForma();
+            forma.ShowDialog();
+        }
     }
 }

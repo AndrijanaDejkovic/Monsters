@@ -91,7 +91,7 @@
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(832, 82);
+            this.btnDodaj.Location = new System.Drawing.Point(186, 354);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(102, 48);
             this.btnDodaj.TabIndex = 6;

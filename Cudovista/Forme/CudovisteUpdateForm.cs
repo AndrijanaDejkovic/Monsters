@@ -60,7 +60,7 @@ namespace Cudovista.Forme
         private void CudovisteUpdateForm_Load(object sender, EventArgs e)
         {
             popuniPodacima();
-            this.Text = $"AZURIRANJE PRODAVNICE {cudoviste.Naziv_cudovista.ToUpper()}";
+            this.Text = $"AZURIRANJE CUDOVISTA {cudoviste.Naziv_cudovista.ToUpper()}";
         }
         public void popuniPodacima()
         {

@@ -1059,9 +1059,11 @@ namespace Cudovista
                 ISession s = DataLayer.GetSession();
 
                 Cudovista.Entiteti.Nemagijsko_cudoviste p = s.Load<Cudovista.Entiteti.Nemagijsko_cudoviste>(id);
-                pb = new NemagijskoCudovisteBasic(p.ID, p.Da_li_zivi_u_vodi, p.Da_li_leti, p.Da_li_ima_rep, p.Da_li_je_otrovno, p.Da_li_ima_kandze, p.Broj_ociju, p.Broj_glava, p.Broj_ekstremiteta, p.Tezina, p.Duzina);
+                pb = new NemagijskoCudovisteBasic();
 
-                s.Close();
+
+          
+        s.Close();
             }
             catch (Exception ec)
             {

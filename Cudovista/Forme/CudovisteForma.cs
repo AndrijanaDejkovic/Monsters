@@ -64,7 +64,7 @@ namespace Cudovista.Forme
 
             if (result == DialogResult.OK)
             {
-                DTOManager.obrisiMagijskoCudoviste(idCudovista);
+                DTOManager.obrisiCudoviste(idCudovista);
                 MessageBox.Show("Brisanje cudovista je uspesno obavljeno!");
                 this.popuniPodacima();
             }
