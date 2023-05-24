@@ -17,6 +17,8 @@ namespace Cudovista.Forme
         public ProtivmereForma()
         {
             InitializeComponent();
+            listProtivmere.View = View.Details;
+
         }
 
         public void popuniPodacima()
@@ -43,6 +45,7 @@ namespace Cudovista.Forme
 
 
             listProtivmere.Refresh();
+            listProtivmere.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

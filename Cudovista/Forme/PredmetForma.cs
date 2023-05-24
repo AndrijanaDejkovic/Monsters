@@ -17,6 +17,8 @@ namespace Cudovista.Forme
         public PredmetForma()
         {
             InitializeComponent();
+            listPredmeti.View = View.Details;
+
         }
 
         public void popuniPodacima()

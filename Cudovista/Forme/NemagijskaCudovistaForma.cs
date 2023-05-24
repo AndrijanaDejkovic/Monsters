@@ -17,6 +17,8 @@ namespace Cudovista.Forme
         public NemagijskaCudovistaForma()
         {
             InitializeComponent();
+            listNemagijska.View = View.Details;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

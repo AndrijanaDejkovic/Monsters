@@ -43,7 +43,7 @@ namespace Cudovista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SvaNemagijskaCudovistaForma forma = new SvaNemagijskaCudovistaForma();
+            ProtivmereForma forma = new ProtivmereForma();
             forma.ShowDialog();
         }
 

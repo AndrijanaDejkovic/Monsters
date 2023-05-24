@@ -17,6 +17,8 @@ namespace Cudovista.Forme
         public SpecijalneSposobnosti()
         {
             InitializeComponent();
+            listSpecSposobnosti.View = View.Details;
+
         }
 
         public void popuniPodacima()

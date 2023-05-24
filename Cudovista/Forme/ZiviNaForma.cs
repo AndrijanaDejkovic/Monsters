@@ -50,6 +50,8 @@ namespace Cudovista.Forme
         public ZiviNaForma()
         {
             InitializeComponent();
+            listZiviNa.View = View.Details;
+
         }
 
         private void listZiviNa_SelectedIndexChanged(object sender, EventArgs e)

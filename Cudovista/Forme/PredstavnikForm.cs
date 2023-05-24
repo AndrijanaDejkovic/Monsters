@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NHibernate;
 using Cudovista.Entiteti;
-using static Cudovista.Entiteti.Lokacija;
 
 namespace Cudovista.Forme
 {
@@ -18,6 +17,8 @@ namespace Cudovista.Forme
         public PredstavnikForm()
         {
             InitializeComponent();
+            listPredstavnik.View = View.Details;
+
         }
 
         public void popuniPodacima()
@@ -30,6 +31,7 @@ namespace Cudovista.Forme
 
             foreach (PredstavnikPregled p in podaci)
             {
+                
 
                 ListViewItem item = new ListViewItem(new string[] { p.Ime_predstavnika, p.Starost.ToString(), p.DatumSusreta.ToString(), p.Ishod, p.Id_cudovista.ToString(), p.Id_lokacije.ToString() });
                 listPredstavnik.Items.Add(item);
@@ -39,6 +41,7 @@ namespace Cudovista.Forme
 
 
             listPredstavnik.Refresh();
+            listPredstavnik.View = View.Details;
         }
 
         private void PredstavnikForm_Load(object sender, EventArgs e)
@@ -68,9 +71,9 @@ namespace Cudovista.Forme
                     Podtip = "Vanzemaljac"
                 };
 
-                Ostrvo lokacija = new Ostrvo();
+                Entiteti.Lokacija.Ostrvo lokacija = new Entiteti.Lokacija.Ostrvo();
 
-                s.Save(lokacija);
+                //s.Save(lokacija);
                 s.Save(c);
 
                 p.Ime_predstavnika = "Veliko cudoviste";
@@ -78,7 +81,7 @@ namespace Cudovista.Forme
                 p.Datum_susreta = DateTime.Now;
                 p.Ishod = "Poraz";
                 p.Id_cudovista = c;
-                p.Id_lokacije = lokacija;
+                //p.Id_lokacije = lokacija;
                 s.Save(p);
 
                 s.Flush();

@@ -18,6 +18,8 @@ namespace Cudovista.Forme
         public ZastitaForma()
         {
             InitializeComponent();
+            listZastita.View = View.Details;
+
         }
 
         public void popuniPodacima()
