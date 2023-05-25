@@ -48,12 +48,10 @@ namespace Cudovista.Forme
             try
             {
                 ISession s = DataLayer.GetSession();
-                Ostrvo m = new Ostrvo();
 
                 Duh o = new Duh();
                 o.Naziv_zastite = "Duhov udarac";
-                o.Id_lokacije = m;
-                s.Save(m);
+                o.Id_lokacije = s.Load<Cudovista.Entiteti.Lokacija>(5);
 
                 s.Save(o);
 
@@ -82,12 +80,10 @@ namespace Cudovista.Forme
             try
             {
                 ISession s = DataLayer.GetSession();
-                Ostrvo m = new Ostrvo();
 
                 Zmaj o = new Zmaj();
                 o.Naziv_zastite = "Zmajeva kugla";
-                o.Id_lokacije = m;
-                s.Save(m);
+                o.Id_lokacije = s.Load<Cudovista.Entiteti.Lokacija>(7);
 
                 s.Save(o);
 
@@ -105,7 +101,7 @@ namespace Cudovista.Forme
             {
                 ISession s = DataLayer.GetSession();
 
-                Zastita o = s.Get<Zastita>(1);
+                Zastita o = s.Get<Zastita>(2);
 
                 s.Delete(o);
                 //s.Delete("from Odeljenje");
@@ -130,12 +126,10 @@ namespace Cudovista.Forme
             try
             {
                 ISession s = DataLayer.GetSession();
-                Ostrvo m = new Ostrvo();
 
                 Kletva o = new Kletva();
                 o.Naziv_zastite = "Crna kletva";
-                o.Id_lokacije = m;
-                s.Save(m);
+                o.Id_lokacije = s.Load<Cudovista.Entiteti.Lokacija>(8);
 
                 s.Save(o);
 

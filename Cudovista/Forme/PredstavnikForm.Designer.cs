@@ -29,26 +29,28 @@
         private void InitializeComponent()
         {
             this.listPredstavnik = new System.Windows.Forms.ListView();
-            this.dodajPredstavnika = new System.Windows.Forms.Button();
-            this.obrisiPredstavnika = new System.Windows.Forms.Button();
-            this.azurirajPredstavnika = new System.Windows.Forms.Button();
             this.Ime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Starost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DatumSusreta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ishod = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Id_cudovista = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Id_lokacije = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dodajPredstavnika = new System.Windows.Forms.Button();
+            this.obrisiPredstavnika = new System.Windows.Forms.Button();
+            this.azurirajPredstavnika = new System.Windows.Forms.Button();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listPredstavnik
             // 
             this.listPredstavnik.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Ime,
             this.Starost,
+            this.Ime,
             this.DatumSusreta,
             this.Ishod,
             this.Id_cudovista,
-            this.Id_lokacije});
+            this.Id_lokacije,
+            this.ID});
             this.listPredstavnik.HideSelection = false;
             this.listPredstavnik.Location = new System.Drawing.Point(41, 38);
             this.listPredstavnik.Name = "listPredstavnik";
@@ -56,6 +58,35 @@
             this.listPredstavnik.TabIndex = 0;
             this.listPredstavnik.UseCompatibleStateImageBehavior = false;
             this.listPredstavnik.SelectedIndexChanged += new System.EventHandler(this.listPredstavnik_SelectedIndexChanged);
+            // 
+            // Ime
+            // 
+            this.Ime.Text = "Ime";
+            // 
+            // Starost
+            // 
+            this.Starost.DisplayIndex = 2;
+            this.Starost.Text = "Starost";
+            // 
+            // DatumSusreta
+            // 
+            this.DatumSusreta.DisplayIndex = 3;
+            this.DatumSusreta.Text = "DatumSusreta";
+            // 
+            // Ishod
+            // 
+            this.Ishod.DisplayIndex = 4;
+            this.Ishod.Text = "Ishod";
+            // 
+            // Id_cudovista
+            // 
+            this.Id_cudovista.DisplayIndex = 5;
+            this.Id_cudovista.Text = "Id_cudovista";
+            // 
+            // Id_lokacije
+            // 
+            this.Id_lokacije.DisplayIndex = 6;
+            this.Id_lokacije.Text = "Id_lokacije";
             // 
             // dodajPredstavnika
             // 
@@ -87,29 +118,10 @@
             this.azurirajPredstavnika.UseVisualStyleBackColor = true;
             this.azurirajPredstavnika.Click += new System.EventHandler(this.azurirajPredstavnika_Click);
             // 
-            // Ime
+            // ID
             // 
-            this.Ime.Text = "Ime";
-            // 
-            // Starost
-            // 
-            this.Starost.Text = "Starost";
-            // 
-            // DatumSusreta
-            // 
-            this.DatumSusreta.Text = "DatumSusreta";
-            // 
-            // Ishod
-            // 
-            this.Ishod.Text = "Ishod";
-            // 
-            // Id_cudovista
-            // 
-            this.Id_cudovista.Text = "Id_cudovista";
-            // 
-            // Id_lokacije
-            // 
-            this.Id_lokacije.Text = "Id_lokacije";
+            this.ID.DisplayIndex = 0;
+            this.ID.Text = "ID";
             // 
             // PredstavnikForm
             // 
@@ -140,5 +152,6 @@
         private System.Windows.Forms.ColumnHeader Ishod;
         private System.Windows.Forms.ColumnHeader Id_cudovista;
         private System.Windows.Forms.ColumnHeader Id_lokacije;
+        private System.Windows.Forms.ColumnHeader ID;
     }
 }

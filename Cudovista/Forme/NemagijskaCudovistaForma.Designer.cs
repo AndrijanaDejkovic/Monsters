@@ -170,6 +170,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "NemagijskaCudovistaForma";
             this.Text = "NemagijskaCudovistaForma";
+            this.Load += new System.EventHandler(this.NemagijskaCudovistaForma_Load);
             this.ResumeLayout(false);
 
         }

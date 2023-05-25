@@ -57,20 +57,12 @@ namespace Cudovista.Forme
 
                 Entiteti.Protivmere o = new Entiteti.Protivmere();
 
-                Entiteti.Cudoviste p = new Entiteti.Cudoviste()
-                {
-
-                    Vek = 10,
-                    Naziv_cudovista = "Snesko",
-                    Podtip = "Snesko"
-                };
-
-                s.Save(p);
+                
 
                 o.Naziv_protivmere = "Stit";
                 o.Opis_protivmere = "Imun na moci 10 minuta";
                 o.Da_li_uslovi = 0;
-                o.Id_cudovista = p;
+                o.Id_cudovista = s.Load<Cudovista.Entiteti.Cudoviste>(51);
                 
                 s.Save(o);
 
@@ -90,7 +82,7 @@ namespace Cudovista.Forme
             {
                 ISession s = DataLayer.GetSession();
 
-                Protivmere o = s.Load<Protivmere>(4);
+                Protivmere o = s.Load<Protivmere>(2);
 
                 //brise se objekat iz baze ali ne i instanca objekta u memroiji
                 s.Delete(o);
@@ -118,20 +110,18 @@ namespace Cudovista.Forme
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Protivmere p = s.Load<Cudovista.Entiteti.Protivmere>(1);
-                s.Close();
+                Cudovista.Entiteti.Protivmere p = s.Load<Cudovista.Entiteti.Protivmere>(2);
 
                 //objekat se modifikuje potpuno nezavisno od sesije
                 p.Opis_protivmere = "Pojacava mu imunitet";
 
                 //otvara se nova sesija
 
-                ISession s1 = DataLayer.GetSession();
 
                 //poziva se Update i objekat se povezuje sa novom sesijom
-                s1.Update(p);
-                s1.Flush();
-                s1.Close();
+                s.Update(p);
+                s.Flush();
+                s.Close();
                 MessageBox.Show(p.Opis_protivmere);
 
 

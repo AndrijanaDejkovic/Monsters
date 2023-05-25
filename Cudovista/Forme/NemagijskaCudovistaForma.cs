@@ -27,7 +27,7 @@ namespace Cudovista.Forme
             {
                 ISession s = DataLayer.GetSession();
 
-                Nemagijsko_cudoviste o = s.Load<Nemagijsko_cudoviste>(4);
+                Nemagijsko_cudoviste o = s.Load<Nemagijsko_cudoviste>(1);
 
                 //brise se objekat iz baze ali ne i instanca objekta u memroiji
                 s.Delete(o);
@@ -97,7 +97,15 @@ namespace Cudovista.Forme
 
 
                 Entiteti.Nemagijsko_cudoviste o = new Entiteti.Nemagijsko_cudoviste();
+                Entiteti.Cudoviste c = new Entiteti.Cudoviste();
 
+                c.Naziv_cudovista = "Ajkula";
+                c.Vek = 16;
+                c.Podtip = "ajkula";
+
+                o.Naziv_cudovista = c.Naziv_cudovista;
+                o.Vek = c.Vek;
+                o.Podtip = c.Podtip;
                 o.Da_li_zivi_u_vodi = 1;
                 o.Da_li_leti = 0;
                 o.Da_li_ima_rep = 1;
@@ -108,6 +116,7 @@ namespace Cudovista.Forme
                 o.Broj_ekstremiteta = 0;
                 o.Duzina = 25;
                 o.Tezina = 150;
+                s.Save(c);
                 s.Save(o);
 
                 s.Flush();
@@ -123,18 +132,15 @@ namespace Cudovista.Forme
         {
             try
             {
-                ISession s = DataLayer.GetSession();
+                ISession s1 = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Nemagijsko_cudoviste p = s.Load<Cudovista.Entiteti.Nemagijsko_cudoviste>(1);
-                s.Close();
+                Cudovista.Entiteti.Nemagijsko_cudoviste p = s1.Load<Cudovista.Entiteti.Nemagijsko_cudoviste>(1);
+              
 
                 //objekat se modifikuje potpuno nezavisno od sesije
                 p.Broj_ociju = 20;
 
-                //otvara se nova sesija
-
-                ISession s1 = DataLayer.GetSession();
 
                 //poziva se Update i objekat se povezuje sa novom sesijom
                 s1.Update(p);
@@ -148,6 +154,11 @@ namespace Cudovista.Forme
             {
                 MessageBox.Show(ec.Message);
             }
+        }
+
+        private void NemagijskaCudovistaForma_Load(object sender, EventArgs e)
+        {
+            popuniPodacima();
         }
     }
 }

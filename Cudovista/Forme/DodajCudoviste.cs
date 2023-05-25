@@ -50,6 +50,7 @@ namespace Cudovista.Forme
                 DTOManager.dodajMagijskoCudoviste(this.cudoviste);
                 MessageBox.Show("Uspesno ste dodali novo cudoviste!");
                 this.Close();
+
             }
             else
             {

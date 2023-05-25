@@ -52,25 +52,12 @@ namespace Cudovista.Forme
             {
                 ISession s = DataLayer.GetSession();
                 Zlato m = new Zlato();
-                Entiteti.Cudoviste p = new Entiteti.Cudoviste()
-                {
-
-                    Vek = 10,
-                    Naziv_cudovista = "Crni gepard",
-                    Podtip = "Geaprd"
-                };
 
                 Lobanja o = new Lobanja();
-                o.Id_cudovista = p;
-                o.ID_Materijala = m;
-                s.Save(p);
-                s.Save(m);
+                o.Id_cudovista = s.Load<Cudovista.Entiteti.Cudoviste>(51);
+                o.ID_Materijala = s.Load<Cudovista.Entiteti.Materijal>(3);
 
                 s.Save(o);
-
-                //p.Predmeti.Add(o);
-
-                s.Save(p);
 
             }
             catch (Exception ec)
@@ -85,7 +72,7 @@ namespace Cudovista.Forme
             {
                 ISession s = DataLayer.GetSession();
 
-                Predmet o = s.Get<Predmet>(1);
+                Predmet o = s.Get<Predmet>(2);
 
                 s.Delete(o);
                 //s.Delete("from Odeljenje");
@@ -104,32 +91,22 @@ namespace Cudovista.Forme
         {
 
         }
-
         private void dodajKrst_Click(object sender, EventArgs e)
         {
             try
             {
                 ISession s = DataLayer.GetSession();
-                Zlato m = new Zlato();
-                Entiteti.Cudoviste p = new Entiteti.Cudoviste()
-                {
-
-                    Vek = 10,
-                    Naziv_cudovista = "Crni Slon",
-                    Podtip = "Slon"
-                };
+   
 
                 Krst o = new Krst();
-                o.Id_cudovista = p;
-                o.ID_Materijala = m;
-                s.Save(p);
-                s.Save(m);
+                o.Id_cudovista = s.Load<Cudovista.Entiteti.Cudoviste>(51);
+                o.ID_Materijala = s.Load<Cudovista.Entiteti.Materijal>(1);
 
                 s.Save(o);
 
                 //p.Predmeti.Add(o);
 
-                s.Save(p);
+                s.Save(o);
             }
             catch (Exception ec)
             {
@@ -153,25 +130,18 @@ namespace Cudovista.Forme
             {
                 ISession s = DataLayer.GetSession();
                 Zlato m = new Zlato();
-                Entiteti.Cudoviste p = new Entiteti.Cudoviste()
-                {
-
-                    Vek = 10,
-                    Naziv_cudovista = "Crni macak",
-                    Podtip = "Macak"
-                };
+              
 
                 Mac o = new Mac();
-                o.Id_cudovista = p;
-                o.ID_Materijala = m;
-                s.Save(p);
-                s.Save(m);
+                o.Id_cudovista = s.Load<Cudovista.Entiteti.Cudoviste>(4);
+                o.ID_Materijala = s.Load<Cudovista.Entiteti.Materijal>(5);
+               
 
                 s.Save(o);
 
                 //p.Predmeti.Add(o);
 
-                s.Save(p);
+                      
             }
             catch (Exception ec)
             {
@@ -196,25 +166,16 @@ namespace Cudovista.Forme
             {
                 ISession s = DataLayer.GetSession();
                 Zlato m = new Zlato();
-                Entiteti.Cudoviste p = new Entiteti.Cudoviste()
-                {
-
-                    Vek = 10,
-                    Naziv_cudovista = "Crni tornado",
-                    Podtip = "tornado"
-                };
+               
 
                 Knjiga o = new Knjiga();
-                o.Id_cudovista = p;
-                o.ID_Materijala = m;
-                s.Save(p);
-                s.Save(m);
+                o.Id_cudovista = s.Load<Cudovista.Entiteti.Cudoviste>(3);
+                o.ID_Materijala = s.Load<Cudovista.Entiteti.Materijal>(4);
+               
 
                 s.Save(o);
 
-                //p.Predmeti.Add(o);
-
-                s.Save(p);
+             
             }
             catch (Exception ec)
             {

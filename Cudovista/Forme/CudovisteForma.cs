@@ -30,8 +30,6 @@ namespace Cudovista.Forme
             listaCudovista.Items.Clear();
             List<MagijskoCudovistePregled> podaci = DTOManager.vratiSvaMagijskaCudovista();
 
-
-
             foreach (MagijskoCudovistePregled p in podaci)
             {
                 ListViewItem item = new ListViewItem(new string[] { p.ID.ToString(), p.Naziv_cudovista, p.Vek.ToString(), p.Podtip, p.Da_li_postoji.ToString()});

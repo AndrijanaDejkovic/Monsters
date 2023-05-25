@@ -17,7 +17,6 @@ namespace Cudovista.Forme
         public PredstavnikForm()
         {
             InitializeComponent();
-            listPredstavnik.View = View.Details;
 
         }
 
@@ -33,7 +32,7 @@ namespace Cudovista.Forme
             {
                 
 
-                ListViewItem item = new ListViewItem(new string[] { p.Ime_predstavnika, p.Starost.ToString(), p.DatumSusreta.ToString(), p.Ishod, p.Id_cudovista.ToString(), p.Id_lokacije.ToString() });
+                ListViewItem item = new ListViewItem(new string[] {  p.Starost.ToString(), p.Ime_predstavnika, p.DatumSusreta.ToString(), p.Ishod, p.Id_cudovista.ToString(), p.Id_lokacije.ToString(), p.IDPredstavnika.ToString() });
                 listPredstavnik.Items.Add(item);
 
             }
@@ -41,12 +40,11 @@ namespace Cudovista.Forme
 
 
             listPredstavnik.Refresh();
-            listPredstavnik.View = View.Details;
         }
 
         private void PredstavnikForm_Load(object sender, EventArgs e)
         {
-
+         
         }
 
         private void listPredstavnik_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,25 +61,13 @@ namespace Cudovista.Forme
 
                 Entiteti.Predstavnik p = new Entiteti.Predstavnik();
 
-                Entiteti.Cudoviste c = new Entiteti.Cudoviste()
-                {
 
-                    Vek = 10,
-                    Naziv_cudovista = "Vanzemaljac",
-                    Podtip = "Vanzemaljac"
-                };
-
-                Entiteti.Lokacija.Ostrvo lokacija = new Entiteti.Lokacija.Ostrvo();
-
-                //s.Save(lokacija);
-                s.Save(c);
-
-                p.Ime_predstavnika = "Veliko cudoviste";
-                p.Starost = 55;
+                p.Ime_predstavnika = "Gorila";
+                p.Starost = 98;
                 p.Datum_susreta = DateTime.Now;
                 p.Ishod = "Poraz";
-                p.Id_cudovista = c;
-                //p.Id_lokacije = lokacija;
+                p.Id_cudovista = s.Load<Cudovista.Entiteti.Cudoviste>(50);
+                p.Id_lokacije = s.Load<Cudovista.Entiteti.Lokacija>(5);
                 s.Save(p);
 
                 s.Flush();
@@ -99,7 +85,7 @@ namespace Cudovista.Forme
             {
                 ISession s = DataLayer.GetSession();
 
-                Predstavnik o = s.Load<Predstavnik>(4);
+                Predstavnik o = s.Load<Predstavnik>(3);
 
                 //brise se objekat iz baze ali ne i instanca objekta u memroiji
                 s.Delete(o);
@@ -123,20 +109,18 @@ namespace Cudovista.Forme
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Predstavnik p = s.Load<Cudovista.Entiteti.Predstavnik>(1);
-                s.Close();
+                Cudovista.Entiteti.Predstavnik p = s.Load<Cudovista.Entiteti.Predstavnik>(2);
 
                 //objekat se modifikuje potpuno nezavisno od sesije
                 p.Ime_predstavnika = "Egzodija";
 
                 //otvara se nova sesija
 
-                ISession s1 = DataLayer.GetSession();
 
                 //poziva se Update i objekat se povezuje sa novom sesijom
-                s1.Update(p);
-                s1.Flush();
-                s1.Close();
+                s.Update(p);
+                s.Flush();
+                s.Close();
                 MessageBox.Show(p.Ime_predstavnika);
 
 

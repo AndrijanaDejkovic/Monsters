@@ -57,8 +57,7 @@ namespace Cudovista.Forme
                 Entiteti.Specijalne_sposobnosti o = new Entiteti.Specijalne_sposobnosti();
 
                 o.Spec_sposobnosti = "Moze da pobedi svako cudoviste";
-                //p.Id_cudovista = 1;
-                //p.Id_lokacije = 1;
+                o.Id_cudovista = s.Load<Cudovista.Entiteti.Cudoviste>(51);
                 s.Save(o);
 
                 s.Flush();
@@ -101,19 +100,17 @@ namespace Cudovista.Forme
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
                 Cudovista.Entiteti.Specijalne_sposobnosti p = s.Load<Cudovista.Entiteti.Specijalne_sposobnosti>(1);
-                s.Close();
 
                 //objekat se modifikuje potpuno nezavisno od sesije
                 p.Spec_sposobnosti = "Moze da nauci da skace visoko";
 
                 //otvara se nova sesija
 
-                ISession s1 = DataLayer.GetSession();
 
                 //poziva se Update i objekat se povezuje sa novom sesijom
-                s1.Update(p);
-                s1.Flush();
-                s1.Close();
+                s.Update(p);
+                s.Flush();
+                s.Close();
                 MessageBox.Show(p.Spec_sposobnosti);
 
 

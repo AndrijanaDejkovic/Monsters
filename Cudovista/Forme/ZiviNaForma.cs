@@ -104,7 +104,7 @@ namespace Cudovista.Forme
             {
                 ISession s = DataLayer.GetSession();
 
-                Zivi_na o = s.Load<Zivi_na>(4);
+                Zivi_na o = s.Load<Zivi_na>(1);
 
                 //brise se objekat iz baze ali ne i instanca objekta u memroiji
                 s.Delete(o);

@@ -285,7 +285,7 @@ namespace Cudovista
         public string Naziv_cudovista;
         public string Podtip;
         public IList<Protivmere> Protivmere;
-        public virtual IList<Predmet> Predmeti { get; set; }
+        public IList<Predmet> Predmeti;
         public IList<Predstavnik> Predstavnici;
         public IList<Legende> Legende;
         public IList<Bajalice> Bajalice;
@@ -296,6 +296,7 @@ namespace Cudovista
             Predmeti = new List<Predmet>();
             Bajalice = new List<Bajalice>();
             Protivmere = new List<Protivmere>();
+            Predmeti = new List<Predmet>();
         }
         public CudivisteBasic(int id, string podtip, string naziv_cudovista, int vek)
         {
