@@ -39,11 +39,11 @@
             this.BrojEkstr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Duzina = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tezina = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Ime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Vek = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ObrisiNemagijsko = new System.Windows.Forms.Button();
             this.DodajNemagijsko = new System.Windows.Forms.Button();
             this.AzurirajNemagijsko = new System.Windows.Forms.Button();
-            this.Ime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Vek = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listNemagijska
@@ -62,10 +62,9 @@
             this.Ime,
             this.Vek});
             this.listNemagijska.HideSelection = false;
-            this.listNemagijska.Location = new System.Drawing.Point(45, 34);
-            this.listNemagijska.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listNemagijska.Location = new System.Drawing.Point(25, 18);
             this.listNemagijska.Name = "listNemagijska";
-            this.listNemagijska.Size = new System.Drawing.Size(871, 713);
+            this.listNemagijska.Size = new System.Drawing.Size(477, 388);
             this.listNemagijska.TabIndex = 0;
             this.listNemagijska.UseCompatibleStateImageBehavior = false;
             this.listNemagijska.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -120,12 +119,15 @@
             this.Tezina.DisplayIndex = 10;
             this.Tezina.Text = "Tezina";
             // 
+            // Ime
+            // 
+            this.Ime.DisplayIndex = 0;
+            // 
             // ObrisiNemagijsko
             // 
-            this.ObrisiNemagijsko.Location = new System.Drawing.Point(1058, 74);
-            this.ObrisiNemagijsko.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ObrisiNemagijsko.Location = new System.Drawing.Point(577, 40);
             this.ObrisiNemagijsko.Name = "ObrisiNemagijsko";
-            this.ObrisiNemagijsko.Size = new System.Drawing.Size(238, 98);
+            this.ObrisiNemagijsko.Size = new System.Drawing.Size(130, 53);
             this.ObrisiNemagijsko.TabIndex = 1;
             this.ObrisiNemagijsko.Text = "ObrisiNemagijsko";
             this.ObrisiNemagijsko.UseVisualStyleBackColor = true;
@@ -133,10 +135,9 @@
             // 
             // DodajNemagijsko
             // 
-            this.DodajNemagijsko.Location = new System.Drawing.Point(1058, 277);
-            this.DodajNemagijsko.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.DodajNemagijsko.Location = new System.Drawing.Point(577, 150);
             this.DodajNemagijsko.Name = "DodajNemagijsko";
-            this.DodajNemagijsko.Size = new System.Drawing.Size(240, 107);
+            this.DodajNemagijsko.Size = new System.Drawing.Size(131, 58);
             this.DodajNemagijsko.TabIndex = 2;
             this.DodajNemagijsko.Text = "DodajNemagijsko";
             this.DodajNemagijsko.UseVisualStyleBackColor = true;
@@ -144,30 +145,24 @@
             // 
             // AzurirajNemagijsko
             // 
-            this.AzurirajNemagijsko.Location = new System.Drawing.Point(1058, 480);
-            this.AzurirajNemagijsko.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.AzurirajNemagijsko.Location = new System.Drawing.Point(577, 260);
             this.AzurirajNemagijsko.Name = "AzurirajNemagijsko";
-            this.AzurirajNemagijsko.Size = new System.Drawing.Size(238, 122);
+            this.AzurirajNemagijsko.Size = new System.Drawing.Size(130, 66);
             this.AzurirajNemagijsko.TabIndex = 3;
             this.AzurirajNemagijsko.Text = "AzurirajNemagijsko";
             this.AzurirajNemagijsko.UseVisualStyleBackColor = true;
             this.AzurirajNemagijsko.Click += new System.EventHandler(this.AzurirajNemagijsko_Click);
             // 
-            // Ime
-            // 
-            this.Ime.DisplayIndex = 0;
-            // 
             // NemagijskaCudovistaForma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(838, 474);
+            this.ClientSize = new System.Drawing.Size(782, 501);
             this.Controls.Add(this.AzurirajNemagijsko);
             this.Controls.Add(this.DodajNemagijsko);
             this.Controls.Add(this.ObrisiNemagijsko);
             this.Controls.Add(this.listNemagijska);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "NemagijskaCudovistaForma";
             this.Text = "NemagijskaCudovistaForma";
             this.Load += new System.EventHandler(this.NemagijskaCudovistaForma_Load);

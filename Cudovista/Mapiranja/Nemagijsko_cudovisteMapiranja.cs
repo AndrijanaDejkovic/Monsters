@@ -14,7 +14,7 @@ namespace Cudovista.Mapiranja
 
             Table("NEMAGIJSKO_CUDOVISTE");
 
-            KeyColumn("ID_Nemagijskog");
+            KeyColumn("ID");
 
             Map(x => x.Da_li_zivi_u_vodi).Column("DA_LI_ZIVI_U_VODI");
             Map(x => x.Da_li_leti).Column("DA_LI_LETI");

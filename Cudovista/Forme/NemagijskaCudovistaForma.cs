@@ -112,7 +112,7 @@ namespace Cudovista.Forme
                 o.Da_li_je_otrovno = 1;
                 o.Da_li_ima_kandze = 0;
                 o.Broj_ociju = 2;
-                o.Broj_glava = 1;
+                o.Broj_glava = 16;
                 o.Broj_ekstremiteta = 0;
                 o.Duzina = 25;
                 o.Tezina = 150;

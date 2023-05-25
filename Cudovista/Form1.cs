@@ -58,5 +58,12 @@ namespace Cudovista
             NemagijskaCudovistaForma forma = new NemagijskaCudovistaForma();
             forma.ShowDialog();
         }
+
+        private void Predstavnici_Click(object sender, EventArgs e)
+        {
+            PredstavnikForm forma = new PredstavnikForm();
+            forma.ShowDialog();
+
+        }
     }
 }

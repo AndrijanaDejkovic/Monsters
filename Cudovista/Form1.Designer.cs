@@ -34,6 +34,7 @@
             this.btnCudovista2 = new System.Windows.Forms.Button();
             this.btnTestiranje = new System.Windows.Forms.Button();
             this.btnNemagijska = new System.Windows.Forms.Button();
+            this.Predstavnici = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(167, 232);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 48);
+            this.label2.Size = new System.Drawing.Size(151, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "CUDOVISTA";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -92,10 +93,23 @@
             this.btnNemagijska.UseVisualStyleBackColor = true;
             this.btnNemagijska.Click += new System.EventHandler(this.btnNemagijska_Click);
             // 
+            // Predstavnici
+            // 
+            this.Predstavnici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Predstavnici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Predstavnici.Location = new System.Drawing.Point(110, 615);
+            this.Predstavnici.Name = "Predstavnici";
+            this.Predstavnici.Size = new System.Drawing.Size(385, 41);
+            this.Predstavnici.TabIndex = 7;
+            this.Predstavnici.Text = "Predstavnici";
+            this.Predstavnici.UseVisualStyleBackColor = false;
+            this.Predstavnici.Click += new System.EventHandler(this.Predstavnici_Click);
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1125, 753);
+            this.Controls.Add(this.Predstavnici);
             this.Controls.Add(this.btnNemagijska);
             this.Controls.Add(this.btnTestiranje);
             this.Controls.Add(this.btnCudovista2);
@@ -121,6 +135,7 @@
         private System.Windows.Forms.Button btnCudovista2;
         private System.Windows.Forms.Button btnTestiranje;
         private System.Windows.Forms.Button btnNemagijska;
+        private System.Windows.Forms.Button Predstavnici;
     }
 }
 
