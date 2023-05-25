@@ -379,18 +379,18 @@ namespace Cudovista
     {
         public int Da_li_postoji;
         public IList<Magijske_sposobnosti> Poseduje_sposobnosti;
-        public  IList<Protivmere> mProtivmere { get; set; }
+   /*     public  IList<Protivmere> mProtivmere { get; set; }
         public  IList<Predmet> mPredmeti { get; set; }
         public  IList<Predstavnik> mPredstavnici { get; set; }
         public  IList<Legende> mLegende { get; set; }
-        public  IList<Bajalice> mBajalice { get; set; }
+        public  IList<Bajalice> mBajalice { get; set; }*/
         public MagijskoCudovisteBasic()
         {
             Poseduje_sposobnosti = new List<Magijske_sposobnosti>();
-            mPredmeti = new List<Predmet>();
+          /*  mPredmeti = new List<Predmet>();
             mPredstavnici  = new List<Predstavnik>();
             mProtivmere = new List<Protivmere>();
-            mLegende = new List<Legende>();
+            mLegende = new List<Legende>();*/
         }
         public MagijskoCudovisteBasic(int id, string podtip, string naziv_cudovista, int vek, int da_li_postoji)
         {

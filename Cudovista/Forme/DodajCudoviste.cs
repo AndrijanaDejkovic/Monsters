@@ -13,7 +13,7 @@ namespace Cudovista.Forme
     public partial class DodajCudoviste : Form
     {
         MagijskoCudovisteBasic cudoviste;
-        CudivisteBasic c;
+       
         
         private void lblPodtip_Click(object sender, EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace Cudovista.Forme
         {
             InitializeComponent();
             cudoviste = new MagijskoCudovisteBasic();
-            c= new CudivisteBasic();
+        
         }
  
         private void button1_Click(object sender, EventArgs e)
@@ -41,12 +41,7 @@ namespace Cudovista.Forme
                 this.cudoviste.Podtip = txtPodtip.Text;
                 this.cudoviste.Da_li_postoji = Int32.Parse(txtPostojiLI.Text);
 
-                this.c.Naziv_cudovista= txtNazivCudovista.Text;
-                this.c.Vek = Int32.Parse(txtVek.Text);
-                this.c.Podtip = txtPodtip.Text;
-
-
-                DTOManager.dodajCudoviste(this.c);
+               
                 DTOManager.dodajMagijskoCudoviste(this.cudoviste);
                 MessageBox.Show("Uspesno ste dodali novo cudoviste!");
                 this.Close();

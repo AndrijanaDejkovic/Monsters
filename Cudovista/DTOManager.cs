@@ -878,7 +878,7 @@ namespace Cudovista
                 o.Vek = p.Vek;
                 o.Da_li_postoji = p.Da_li_postoji;
 
-                s.SaveOrUpdate(o);
+                s.Save(o);
 
                 s.Flush();
 
@@ -947,6 +947,7 @@ namespace Cudovista
                 ISession s = DataLayer.GetSession();
 
                 Cudovista.Entiteti.Magijsko_cudoviste o = s.Load<Cudovista.Entiteti.Magijsko_cudoviste>(id);
+                o.Poseduje_sposobnosti.Clear();
 
                 s.Delete(o);
                 s.Flush();

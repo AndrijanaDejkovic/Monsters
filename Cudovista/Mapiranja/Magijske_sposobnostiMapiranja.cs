@@ -14,7 +14,7 @@ namespace Cudovista.Mapiranja
         {
             Table("MAGIJSKE_SPOSOBNOSTI");
 
-            Id(x => x.ID, "ID").GeneratedBy.TriggerIdentity();
+            Id(x => x.ID, "ID_MAGIJSKE_SPOSOBNOSTI").GeneratedBy.TriggerIdentity();
 
             Map(x => x.Naziv_sposobnosti).Column("NAZIV_SPOSOBNOSTI");
             Map(x => x.Da_li_je_odbrambena).Column("DA_LI_JE_ODBRAMBENA");

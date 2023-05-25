@@ -100,6 +100,12 @@
     <Compile Include="Forme\DodajNemagijsko.Designer.cs">
       <DependentUpon>DodajNemagijsko.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\DodajSposobnostForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajSposobnostForma.Designer.cs">
+      <DependentUpon>DodajSposobnostForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FormaTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\DodajNemagijsko.resx">
       <DependentUpon>DodajNemagijsko.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajSposobnostForma.resx">
+      <DependentUpon>DodajSposobnostForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormaTest.resx">
       <DependentUpon>FormaTest.cs</DependentUpon>

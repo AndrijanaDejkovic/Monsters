@@ -62,7 +62,8 @@ namespace Cudovista.Forme
 
             if (result == DialogResult.OK)
             {
-                DTOManager.obrisiCudoviste(idCudovista);
+                //DTOManager.obrisiCudoviste(idCudovista);
+                DTOManager.obrisiMagijskoCudoviste(idCudovista);
                 MessageBox.Show("Brisanje cudovista je uspesno obavljeno!");
                 this.popuniPodacima();
             }
@@ -81,12 +82,12 @@ namespace Cudovista.Forme
         {
             if (listaCudovista.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Izaberite prodavnicu cije podatke zelite da izmenite!");
+                MessageBox.Show("Izaberite cudoviste cije podatke zelite da izmenite!");
                 return;
             }
 
-            int idProdavnice = Int32.Parse(listaCudovista.SelectedItems[0].SubItems[0].Text);
-            MagijskoCudovisteBasic ob = DTOManager.vratiMagijskoCudoviste(idProdavnice);
+            int idCudovista = Int32.Parse(listaCudovista.SelectedItems[0].SubItems[0].Text);
+            MagijskoCudovisteBasic ob = DTOManager.vratiMagijskoCudoviste(idCudovista);
 
             CudovisteUpdateForm formaUpdate = new CudovisteUpdateForm(ob);
             formaUpdate.ShowDialog();
@@ -94,34 +95,21 @@ namespace Cudovista.Forme
             this.popuniPodacima();
         }
 
-     /*   private void listaCudovista_Click(object sender, EventArgs e)
+        private void btnSposobnost_Click(object sender, EventArgs e)
         {
-            if (listaCudovista.SelectedIndices.Count > 0)
+            if (listaCudovista.SelectedItems.Count == 0)
             {
-                int selectedIndex = listaCudovista.SelectedIndices[0];
-
-                // Access the selected item using the index
-                ListViewItem selectedItem = listaCudovista.Items[selectedIndex];
-
-                // Do something with the selected item
-                // For example, you can display its text in a MessageBox
-                MessageBox.Show(selectedItem.Text);
+                MessageBox.Show("Izaberite cudoviste kom zelite da dodate sposobnost!");
+                return;
             }
+
+            int idCudovista = Int32.Parse(listaCudovista.SelectedItems[0].SubItems[0].Text);
+            MagijskoCudovisteBasic ob = DTOManager.vratiMagijskoCudoviste(idCudovista);
+
+            DodajSposobnostForma formaUpdate = new DodajSposobnostForma(ob);
+            formaUpdate.ShowDialog();
+
+            this.popuniPodacima();
         }
-
-        private void listaCudovista_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listaCudovista.SelectedIndices.Count > 0)
-            {
-                int selectedIndex = listaCudovista.SelectedIndices[0];
-
-                // Access the selected item using the index
-                ListViewItem selectedItem = listaCudovista.Items[selectedIndex];
-
-                // Do something with the selected item
-                // For example, you can display its text in a MessageBox
-                MessageBox.Show(selectedItem.Text);
-            }
-        }*/
     }
 }

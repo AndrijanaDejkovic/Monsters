@@ -8,7 +8,6 @@ namespace Cudovista.Entiteti
 {
     public class Magijsko_cudoviste : Cudoviste
     {
-        public virtual int ID { get; set; }
         public virtual int Da_li_postoji { get; set; }
         public virtual IList<Magijske_sposobnosti> Poseduje_sposobnosti { get; set; }
     }

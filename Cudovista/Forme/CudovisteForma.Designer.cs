@@ -38,6 +38,7 @@
             this.btnDodajCudoviste = new System.Windows.Forms.Button();
             this.btnObrisi = new System.Windows.Forms.Button();
             this.btnIzmeni = new System.Windows.Forms.Button();
+            this.btnSposobnost = new System.Windows.Forms.Button();
             this.Lista_Cudovista.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,12 +125,23 @@
             this.btnIzmeni.UseVisualStyleBackColor = true;
             this.btnIzmeni.Click += new System.EventHandler(this.btnIzmeni_Click);
             // 
+            // btnSposobnost
+            // 
+            this.btnSposobnost.Location = new System.Drawing.Point(787, 325);
+            this.btnSposobnost.Name = "btnSposobnost";
+            this.btnSposobnost.Size = new System.Drawing.Size(243, 76);
+            this.btnSposobnost.TabIndex = 3;
+            this.btnSposobnost.Text = "Dodaj sposobnost cudovistu";
+            this.btnSposobnost.UseVisualStyleBackColor = true;
+            this.btnSposobnost.Click += new System.EventHandler(this.btnSposobnost_Click);
+            // 
             // CudovisteForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1354, 660);
+            this.Controls.Add(this.btnSposobnost);
             this.Controls.Add(this.btnIzmeni);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnDodajCudoviste);
@@ -154,5 +166,6 @@
         private System.Windows.Forms.ColumnHeader Podtip;
         private System.Windows.Forms.ColumnHeader Da_li_postoji;
         private System.Windows.Forms.Button btnIzmeni;
+        private System.Windows.Forms.Button btnSposobnost;
     }
 }
