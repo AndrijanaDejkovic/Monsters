@@ -35,6 +35,7 @@ namespace Cudovista.Forme
 
                 s.Flush();
                 s.Close();
+                this.popuniPodacima();
 
             }
             catch (Exception ec)
@@ -121,6 +122,7 @@ namespace Cudovista.Forme
 
                 s.Flush();
                 s.Close();
+                this.popuniPodacima();
             }
             catch (Exception ec)
             {
@@ -147,8 +149,9 @@ namespace Cudovista.Forme
                 s1.Flush();
                 s1.Close();
                 MessageBox.Show(p.Broj_ociju.ToString());
+                this.popuniPodacima();
 
-                
+
             }
             catch (Exception ec)
             {

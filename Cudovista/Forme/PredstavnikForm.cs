@@ -17,6 +17,7 @@ namespace Cudovista.Forme
         public PredstavnikForm()
         {
             InitializeComponent();
+            listPredstavnik.View = View.Details;
 
         }
 
@@ -32,7 +33,7 @@ namespace Cudovista.Forme
             {
                 
 
-                ListViewItem item = new ListViewItem(new string[] {  p.Starost.ToString(), p.Ime_predstavnika, p.DatumSusreta.ToString(), p.Ishod, p.Id_cudovista.ToString(), p.Id_lokacije.ToString(), p.IDPredstavnika.ToString() });
+                ListViewItem item = new ListViewItem(new string[] {  p.Starost.ToString(), p.Ime_predstavnika, /*p.DatumSusreta.ToString(),*/ p.Ishod, p.IDPredstavnika.ToString() });
                 listPredstavnik.Items.Add(item);
 
             }
@@ -44,7 +45,7 @@ namespace Cudovista.Forme
 
         private void PredstavnikForm_Load(object sender, EventArgs e)
         {
-         
+            popuniPodacima();
         }
 
         private void listPredstavnik_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,6 +73,7 @@ namespace Cudovista.Forme
 
                 s.Flush();
                 s.Close();
+                this.popuniPodacima();
             }
             catch (Exception ec)
             {
@@ -93,6 +95,7 @@ namespace Cudovista.Forme
 
                 s.Flush();
                 s.Close();
+                this.popuniPodacima();
 
             }
             catch (Exception ec)
@@ -122,6 +125,7 @@ namespace Cudovista.Forme
                 s.Flush();
                 s.Close();
                 MessageBox.Show(p.Ime_predstavnika);
+                this.popuniPodacima();
 
 
             }
