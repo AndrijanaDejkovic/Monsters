@@ -112,6 +112,12 @@
     <Compile Include="Forme\FormaTest.Designer.cs">
       <DependentUpon>FormaTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\IzlistajSposobnostiForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzlistajSposobnostiForma.Designer.cs">
+      <DependentUpon>IzlistajSposobnostiForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\NemagijskaCudovistaForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FormaTest.resx">
       <DependentUpon>FormaTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzlistajSposobnostiForma.resx">
+      <DependentUpon>IzlistajSposobnostiForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\NemagijskaCudovistaForma.resx">
       <DependentUpon>NemagijskaCudovistaForma.cs</DependentUpon>

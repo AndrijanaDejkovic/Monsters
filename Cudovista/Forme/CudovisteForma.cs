@@ -111,5 +111,22 @@ namespace Cudovista.Forme
 
             this.popuniPodacima();
         }
+
+        private void btnIzlistaj_Click(object sender, EventArgs e)
+        {
+            if (listaCudovista.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite cudoviste kom zelite da dodate sposobnost!");
+                return;
+            }
+
+            int idCudovista = Int32.Parse(listaCudovista.SelectedItems[0].SubItems[0].Text);
+            MagijskoCudovisteBasic ob = DTOManager.vratiMagijskoCudoviste(idCudovista);
+
+            IzlistajSposobnostiForma forma = new IzlistajSposobnostiForma(ob);
+            forma.ShowDialog();
+
+            this.popuniPodacima();
+        }
     }
 }

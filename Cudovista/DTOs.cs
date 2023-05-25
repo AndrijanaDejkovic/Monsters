@@ -586,13 +586,13 @@ namespace Cudovista
         {
 
         }
-        public MagijskeSposobnostiBasic(int ID, string Naziv_sposobnosti, int Da_li_je_odbrambena, string Opis_sposobnosti, Magijsko_cudoviste id_cudovista)
+        public MagijskeSposobnostiBasic(int ID, string Naziv_sposobnosti, int Da_li_je_odbrambena, string Opis_sposobnosti/*, Magijsko_cudoviste id_cudovista*/)
         {
             this.ID = ID;
             this.Naziv_sposobnosti = Naziv_sposobnosti;
             this.Da_li_je_odbrambena = Da_li_je_odbrambena;
             this.Opis_sposobnosti = Opis_sposobnosti;
-            this.Id_cudovista = id_cudovista;
+           // this.Id_cudovista = id_cudovista;
         }
 
     }

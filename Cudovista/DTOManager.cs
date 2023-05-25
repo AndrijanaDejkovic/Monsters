@@ -939,7 +939,28 @@ namespace Cudovista
 
             return pb;
         }
-        
+        public static List<MagijskeSposobnostiPregled> vratiSposobnostiMagijskogCudovista(int id)
+        {
+            MagijskoCudovisteBasic pb = new MagijskoCudovisteBasic();
+            List<MagijskeSposobnostiPregled> lista = new List<MagijskeSposobnostiPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Cudovista.Entiteti.Magijsko_cudoviste o = s.Load<Cudovista.Entiteti.Magijsko_cudoviste>(id);
+                lista =o.Poseduje_sposobnosti as List<Cudovista.MagijskeSposobnostiPregled>;
+                pb = new MagijskoCudovisteBasic(o.ID, o.Podtip, o.Naziv_cudovista, o.Vek, o.Da_li_postoji);
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+
+            return lista;
+        }
+
         public static void obrisiMagijskoCudoviste(int id)
         {
             try
@@ -1650,6 +1671,32 @@ namespace Cudovista
             }
         }
 
+        public static void dodajMagijskuSposobnost2(MagijskeSposobnostiBasic p, int idCudovista)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Cudovista.Entiteti.Magijske_sposobnosti o = new Cudovista.Entiteti.Magijske_sposobnosti();
+                Magijsko_cudoviste magijskoCudoviste = s.Get<Magijsko_cudoviste>(idCudovista);
+                o.ID = p.ID;
+                o.Naziv_sposobnosti = p.Naziv_sposobnosti;
+                o.Da_li_je_odbrambena = p.Da_li_je_odbrambena;
+                o.Opis_sposobnosti = p.Opis_sposobnosti;
+                o.Id_cudovista = magijskoCudoviste;
+
+                s.Save(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                //handle exceptions
+            }
+        }
+
         public static MagijskeSposobnostiBasic azurirajMagijskuSposobnost(MagijskeSposobnostiBasic p)
         {
             try
@@ -1684,7 +1731,7 @@ namespace Cudovista
                 ISession s = DataLayer.GetSession();
 
                 Cudovista.Entiteti.Magijske_sposobnosti p = s.Load<Cudovista.Entiteti.Magijske_sposobnosti>(id);
-                pb = new MagijskeSposobnostiBasic(p.ID, p.Naziv_sposobnosti, p.Da_li_je_odbrambena, p.Opis_sposobnosti, p.Id_cudovista);
+                pb = new MagijskeSposobnostiBasic(p.ID, p.Naziv_sposobnosti, p.Da_li_je_odbrambena, p.Opis_sposobnosti/*, p.Id_cudovista*/);
 
                 s.Close();
             }

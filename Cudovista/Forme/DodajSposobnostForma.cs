@@ -41,7 +41,7 @@ namespace Cudovista.Forme
 
 
                // this.cudoviste.Poseduje_sposobnosti.Add(this.sposobnost);
-                DTOManager.dodajMagijskuSposobnost(this.sposobnost);
+                DTOManager.dodajMagijskuSposobnost2(this.sposobnost, this.cudoviste.ID);
                 MessageBox.Show("Uspesno ste dodali novu sposobnost!");
                 this.Close();
 

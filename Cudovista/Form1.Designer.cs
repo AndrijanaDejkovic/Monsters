@@ -40,7 +40,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(157, 26);
+            this.pictureBox2.Location = new System.Drawing.Point(175, 34);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(234, 176);
             this.pictureBox2.TabIndex = 0;
@@ -97,14 +97,14 @@
             // Form1
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1125, 753);
+            this.ClientSize = new System.Drawing.Size(576, 767);
             this.Controls.Add(this.Predstavnici);
             this.Controls.Add(this.btnTestiranje);
             this.Controls.Add(this.btnCudovista2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Name = "Form1";
-            this.Text = "Ma";
+            this.Text = "ro";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -35,6 +35,7 @@
             this.txtOdbrambena = new System.Windows.Forms.TextBox();
             this.txtOpis = new System.Windows.Forms.TextBox();
             this.btnDodajSposobnost = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNaziv
@@ -95,12 +96,22 @@
             this.btnDodajSposobnost.UseVisualStyleBackColor = true;
             this.btnDodajSposobnost.Click += new System.EventHandler(this.btnDodajSposobnost_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(490, 214);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 25);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "0 ili 1";
+            // 
             // DodajSposobnostForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(844, 515);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDodajSposobnost);
             this.Controls.Add(this.txtOpis);
             this.Controls.Add(this.txtOdbrambena);
@@ -124,5 +135,6 @@
         private System.Windows.Forms.TextBox txtOdbrambena;
         private System.Windows.Forms.TextBox txtOpis;
         private System.Windows.Forms.Button btnDodajSposobnost;
+        private System.Windows.Forms.Label label1;
     }
 }

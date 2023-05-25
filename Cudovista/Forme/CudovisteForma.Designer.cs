@@ -39,6 +39,7 @@
             this.btnObrisi = new System.Windows.Forms.Button();
             this.btnIzmeni = new System.Windows.Forms.Button();
             this.btnSposobnost = new System.Windows.Forms.Button();
+            this.btnIzlistaj = new System.Windows.Forms.Button();
             this.Lista_Cudovista.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,12 +136,23 @@
             this.btnSposobnost.UseVisualStyleBackColor = true;
             this.btnSposobnost.Click += new System.EventHandler(this.btnSposobnost_Click);
             // 
+            // btnIzlistaj
+            // 
+            this.btnIzlistaj.Location = new System.Drawing.Point(787, 422);
+            this.btnIzlistaj.Name = "btnIzlistaj";
+            this.btnIzlistaj.Size = new System.Drawing.Size(243, 44);
+            this.btnIzlistaj.TabIndex = 4;
+            this.btnIzlistaj.Text = "Sposobnosti cudovista";
+            this.btnIzlistaj.UseVisualStyleBackColor = true;
+            this.btnIzlistaj.Click += new System.EventHandler(this.btnIzlistaj_Click);
+            // 
             // CudovisteForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1354, 660);
+            this.Controls.Add(this.btnIzlistaj);
             this.Controls.Add(this.btnSposobnost);
             this.Controls.Add(this.btnIzmeni);
             this.Controls.Add(this.btnObrisi);
@@ -167,5 +179,6 @@
         private System.Windows.Forms.ColumnHeader Da_li_postoji;
         private System.Windows.Forms.Button btnIzmeni;
         private System.Windows.Forms.Button btnSposobnost;
+        private System.Windows.Forms.Button btnIzlistaj;
     }
 }
