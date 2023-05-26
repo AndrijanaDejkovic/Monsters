@@ -8,7 +8,7 @@ using System.Threading.Tasks;namespace Cudovista.Entiteti
 {
     public class Nemagijsko_cudoviste : Cudoviste
     {
-        public virtual int ID_Nemagijskog { get; set; }
+        
         public virtual int Da_li_zivi_u_vodi { get; set; }
         public virtual int Da_li_leti { get; set; }
         public virtual int Da_li_ima_rep { get; set; }

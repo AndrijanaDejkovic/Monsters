@@ -107,9 +107,10 @@
             // 
             // btnAzuriraj
             // 
+            this.btnAzuriraj.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnAzuriraj.Location = new System.Drawing.Point(164, 386);
             this.btnAzuriraj.Name = "btnAzuriraj";
-            this.btnAzuriraj.Size = new System.Drawing.Size(112, 44);
+            this.btnAzuriraj.Size = new System.Drawing.Size(191, 68);
             this.btnAzuriraj.TabIndex = 8;
             this.btnAzuriraj.Text = "Azuriraj";
             this.btnAzuriraj.UseVisualStyleBackColor = true;

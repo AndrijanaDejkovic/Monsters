@@ -72,7 +72,7 @@ namespace Cudovista
     public class NemagijskoCudovistePregled : CudivistePregled
     {
         //nisam menjala konstruktore
-        public int ID_Nemagijskog;
+     
         public int Da_li_zivi_u_vodi;
         public int Da_li_leti;
         public int Da_li_ima_rep;
@@ -90,9 +90,12 @@ namespace Cudovista
         {
 
         }
-        public NemagijskoCudovistePregled(int id_Nemagijskog, int da_li_zivi_u_vodi, int da_li_leti, int da_li_ima_rep, int da_li_je_otrovno, int da_li_ima_kandze, int broj_ociju, int broj_glava, int broj_ekstremiteta, int tezina, int duzina)
+        public NemagijskoCudovistePregled( int id, string naziv, string podtip, int vek, int da_li_zivi_u_vodi, int da_li_leti, int da_li_ima_rep, int da_li_je_otrovno, int da_li_ima_kandze, int broj_ociju, int broj_glava, int broj_ekstremiteta, int tezina, int duzina)
         {
-            this.ID_Nemagijskog = id_Nemagijskog;
+            this.ID= id;
+            this.Naziv_cudovista= naziv;
+            this.Podtip= podtip;
+            this.Vek= vek;
             this.Da_li_zivi_u_vodi = da_li_zivi_u_vodi;
             this.Da_li_leti = da_li_leti;
             this.Da_li_ima_rep = da_li_ima_rep;
@@ -108,7 +111,7 @@ namespace Cudovista
 
     public class NemagijskoCudovisteBasic : CudivisteBasic
     {
-        public int ID_Nemagijskog;
+        
         public int Da_li_zivi_u_vodi;
         public int Da_li_leti;
         public int Da_li_ima_rep;
@@ -125,10 +128,9 @@ namespace Cudovista
         {
 
         }
-        public NemagijskoCudovisteBasic(int ID, string Naziv, int Vek, string Podtip, int id_Nemagijskog, int da_li_zivi_u_vodi, int da_li_leti, int da_li_ima_rep, int da_li_je_otrovno, int da_li_ima_kandze, int broj_ociju, int broj_glava, int broj_ekstremiteta, int tezina, int duzina)
+        public NemagijskoCudovisteBasic(int ID, string Naziv, int Vek, string Podtip,  int da_li_zivi_u_vodi, int da_li_leti, int da_li_ima_rep, int da_li_je_otrovno, int da_li_ima_kandze, int broj_ociju, int broj_glava, int broj_ekstremiteta, int tezina, int duzina)
         {
             this.ID = ID;
-            this.ID_Nemagijskog = id_Nemagijskog;
             this.Da_li_zivi_u_vodi = da_li_zivi_u_vodi;
             this.Da_li_leti = da_li_leti;
             this.Da_li_ima_rep = da_li_ima_rep;
@@ -379,15 +381,15 @@ namespace Cudovista
     {
         public int Da_li_postoji;
         public IList<Magijske_sposobnosti> Poseduje_sposobnosti;
-   /*     public  IList<Protivmere> mProtivmere { get; set; }
-        public  IList<Predmet> mPredmeti { get; set; }
-        public  IList<Predstavnik> mPredstavnici { get; set; }
-        public  IList<Legende> mLegende { get; set; }
-        public  IList<Bajalice> mBajalice { get; set; }*/
+       /* public IList<Protivmere> mProtivmere { get; set; }
+        public IList<Predmet> mPredmeti { get; set; }
+        public IList<Predstavnik> mPredstavnici { get; set; }
+        public IList<Legende> mLegende { get; set; }
+        public IList<Bajalice> mBajalice { get; set; }*/
         public MagijskoCudovisteBasic()
         {
             Poseduje_sposobnosti = new List<Magijske_sposobnosti>();
-          /*  mPredmeti = new List<Predmet>();
+            /*mPredmeti = new List<Predmet>();
             mPredstavnici  = new List<Predstavnik>();
             mProtivmere = new List<Protivmere>();
             mLegende = new List<Legende>();*/

@@ -91,9 +91,10 @@
             // 
             // btnDodaj
             // 
+            this.btnDodaj.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnDodaj.Location = new System.Drawing.Point(186, 354);
             this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(102, 48);
+            this.btnDodaj.Size = new System.Drawing.Size(211, 54);
             this.btnDodaj.TabIndex = 6;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;

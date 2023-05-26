@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBoxNaziv = new System.Windows.Forms.TextBox();
+            this.textBoxPodtip = new System.Windows.Forms.TextBox();
+            this.textBoxVek = new System.Windows.Forms.TextBox();
+            this.textVoda = new System.Windows.Forms.TextBox();
+            this.textBoxOtrov = new System.Windows.Forms.TextBox();
+            this.textBoxRep = new System.Windows.Forms.TextBox();
+            this.textBoxLet = new System.Windows.Forms.TextBox();
+            this.textBoxOci = new System.Windows.Forms.TextBox();
+            this.textBoxKandze = new System.Windows.Forms.TextBox();
+            this.textBoxEktremiteti = new System.Windows.Forms.TextBox();
+            this.textBoxGlava = new System.Windows.Forms.TextBox();
             this.txtNaziv = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtRep = new System.Windows.Forms.Label();
@@ -51,111 +50,108 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxTezina = new System.Windows.Forms.TextBox();
+            this.textBoxDuzina = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // textBoxNaziv
             // 
-            this.button1.Location = new System.Drawing.Point(698, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textBoxNaziv.AllowDrop = true;
+            this.textBoxNaziv.Location = new System.Drawing.Point(362, 27);
+            this.textBoxNaziv.Name = "textBoxNaziv";
+            this.textBoxNaziv.Size = new System.Drawing.Size(100, 29);
+            this.textBoxNaziv.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxPodtip
             // 
-            this.textBox1.Location = new System.Drawing.Point(362, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 29);
-            this.textBox1.TabIndex = 1;
+            this.textBoxPodtip.Location = new System.Drawing.Point(362, 97);
+            this.textBoxPodtip.Name = "textBoxPodtip";
+            this.textBoxPodtip.Size = new System.Drawing.Size(100, 29);
+            this.textBoxPodtip.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxVek
             // 
-            this.textBox2.Location = new System.Drawing.Point(362, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 29);
-            this.textBox2.TabIndex = 2;
+            this.textBoxVek.Location = new System.Drawing.Point(362, 62);
+            this.textBoxVek.Name = "textBoxVek";
+            this.textBoxVek.Size = new System.Drawing.Size(100, 29);
+            this.textBoxVek.TabIndex = 3;
             // 
-            // textBox3
+            // textVoda
             // 
-            this.textBox3.Location = new System.Drawing.Point(362, 62);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 29);
-            this.textBox3.TabIndex = 3;
+            this.textVoda.Location = new System.Drawing.Point(362, 132);
+            this.textVoda.Name = "textVoda";
+            this.textVoda.Size = new System.Drawing.Size(100, 29);
+            this.textVoda.TabIndex = 4;
             // 
-            // textBox4
+            // textBoxOtrov
             // 
-            this.textBox4.Location = new System.Drawing.Point(362, 132);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 29);
-            this.textBox4.TabIndex = 4;
+            this.textBoxOtrov.Location = new System.Drawing.Point(362, 234);
+            this.textBoxOtrov.Name = "textBoxOtrov";
+            this.textBoxOtrov.Size = new System.Drawing.Size(100, 29);
+            this.textBoxOtrov.TabIndex = 5;
             // 
-            // textBox5
+            // textBoxRep
             // 
-            this.textBox5.Location = new System.Drawing.Point(362, 234);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 29);
-            this.textBox5.TabIndex = 5;
+            this.textBoxRep.Location = new System.Drawing.Point(362, 199);
+            this.textBoxRep.Name = "textBoxRep";
+            this.textBoxRep.Size = new System.Drawing.Size(100, 29);
+            this.textBoxRep.TabIndex = 6;
             // 
-            // textBox6
+            // textBoxLet
             // 
-            this.textBox6.Location = new System.Drawing.Point(362, 199);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 29);
-            this.textBox6.TabIndex = 6;
+            this.textBoxLet.Location = new System.Drawing.Point(362, 164);
+            this.textBoxLet.Name = "textBoxLet";
+            this.textBoxLet.Size = new System.Drawing.Size(100, 29);
+            this.textBoxLet.TabIndex = 7;
             // 
-            // textBox7
+            // textBoxOci
             // 
-            this.textBox7.Location = new System.Drawing.Point(362, 164);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 29);
-            this.textBox7.TabIndex = 7;
+            this.textBoxOci.Location = new System.Drawing.Point(362, 318);
+            this.textBoxOci.Name = "textBoxOci";
+            this.textBoxOci.Size = new System.Drawing.Size(100, 29);
+            this.textBoxOci.TabIndex = 8;
             // 
-            // textBox8
+            // textBoxKandze
             // 
-            this.textBox8.Location = new System.Drawing.Point(362, 318);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 29);
-            this.textBox8.TabIndex = 8;
+            this.textBoxKandze.Location = new System.Drawing.Point(362, 286);
+            this.textBoxKandze.Name = "textBoxKandze";
+            this.textBoxKandze.Size = new System.Drawing.Size(100, 29);
+            this.textBoxKandze.TabIndex = 9;
             // 
-            // textBox9
+            // textBoxEktremiteti
             // 
-            this.textBox9.Location = new System.Drawing.Point(374, 283);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 29);
-            this.textBox9.TabIndex = 9;
+            this.textBoxEktremiteti.Location = new System.Drawing.Point(362, 393);
+            this.textBoxEktremiteti.Name = "textBoxEktremiteti";
+            this.textBoxEktremiteti.Size = new System.Drawing.Size(100, 29);
+            this.textBoxEktremiteti.TabIndex = 10;
             // 
-            // textBox10
+            // textBoxGlava
             // 
-            this.textBox10.Location = new System.Drawing.Point(362, 393);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 29);
-            this.textBox10.TabIndex = 10;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(362, 353);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 29);
-            this.textBox11.TabIndex = 11;
+            this.textBoxGlava.Location = new System.Drawing.Point(362, 353);
+            this.textBoxGlava.Name = "textBoxGlava";
+            this.textBoxGlava.Size = new System.Drawing.Size(100, 29);
+            this.textBoxGlava.TabIndex = 11;
             // 
             // txtNaziv
             // 
             this.txtNaziv.AutoSize = true;
             this.txtNaziv.Location = new System.Drawing.Point(215, 31);
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(107, 44);
+            this.txtNaziv.Size = new System.Drawing.Size(61, 25);
             this.txtNaziv.TabIndex = 12;
             this.txtNaziv.Text = "Naziv";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(215, 232);
+            this.label2.Location = new System.Drawing.Point(182, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
+            this.label2.Size = new System.Drawing.Size(158, 25);
             this.label2.TabIndex = 13;
-            this.label2.Text = "label2";
+            this.label2.Text = "Da_li_je_otrovno";
             // 
             // txtRep
             // 
@@ -198,51 +194,99 @@
             this.txtVek.AutoSize = true;
             this.txtVek.Location = new System.Drawing.Point(215, 66);
             this.txtVek.Name = "txtVek";
-            this.txtVek.Size = new System.Drawing.Size(82, 44);
+            this.txtVek.Size = new System.Drawing.Size(47, 25);
             this.txtVek.TabIndex = 18;
             this.txtVek.Text = "Vek";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(208, 332);
+            this.label8.Location = new System.Drawing.Point(205, 322);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 25);
+            this.label8.Size = new System.Drawing.Size(97, 25);
             this.label8.TabIndex = 19;
-            this.label8.Text = "label8";
+            this.label8.Text = "Broj_ociju";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(208, 292);
+            this.label9.Location = new System.Drawing.Point(167, 286);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 25);
+            this.label9.Size = new System.Drawing.Size(173, 25);
             this.label9.TabIndex = 20;
-            this.label9.Text = "label9";
+            this.label9.Text = "Da_li_ima_kandze";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(205, 357);
+            this.label10.Location = new System.Drawing.Point(197, 357);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 25);
+            this.label10.Size = new System.Drawing.Size(104, 25);
             this.label10.TabIndex = 21;
-            this.label10.Text = "label10";
+            this.label10.Text = "Broj_glava";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(215, 393);
+            this.label11.Location = new System.Drawing.Point(178, 393);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 25);
+            this.label11.Size = new System.Drawing.Size(162, 25);
             this.label11.TabIndex = 22;
-            this.label11.Text = "label11";
+            this.label11.Text = "Broj_ekstremiteta";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(212, 467);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 25);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Tezina";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(212, 432);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 25);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Duzina";
+            // 
+            // textBoxTezina
+            // 
+            this.textBoxTezina.Location = new System.Drawing.Point(362, 467);
+            this.textBoxTezina.Name = "textBoxTezina";
+            this.textBoxTezina.Size = new System.Drawing.Size(100, 29);
+            this.textBoxTezina.TabIndex = 25;
+            // 
+            // textBoxDuzina
+            // 
+            this.textBoxDuzina.Location = new System.Drawing.Point(362, 432);
+            this.textBoxDuzina.Name = "textBoxDuzina";
+            this.textBoxDuzina.Size = new System.Drawing.Size(100, 29);
+            this.textBoxDuzina.TabIndex = 26;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(574, 438);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 58);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "dodaj";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DodajNemagijsko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(912, 546);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxDuzina);
+            this.Controls.Add(this.textBoxTezina);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -254,39 +298,37 @@
             this.Controls.Add(this.txtRep);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNaziv);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxGlava);
+            this.Controls.Add(this.textBoxEktremiteti);
+            this.Controls.Add(this.textBoxKandze);
+            this.Controls.Add(this.textBoxOci);
+            this.Controls.Add(this.textBoxLet);
+            this.Controls.Add(this.textBoxRep);
+            this.Controls.Add(this.textBoxOtrov);
+            this.Controls.Add(this.textVoda);
+            this.Controls.Add(this.textBoxVek);
+            this.Controls.Add(this.textBoxPodtip);
+            this.Controls.Add(this.textBoxNaziv);
             this.Name = "DodajNemagijsko";
             this.Text = "DodajNemagijsko";
+            this.Load += new System.EventHandler(this.DodajNemagijsko_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBoxNaziv;
+        private System.Windows.Forms.TextBox textBoxPodtip;
+        private System.Windows.Forms.TextBox textBoxVek;
+        private System.Windows.Forms.TextBox textVoda;
+        private System.Windows.Forms.TextBox textBoxOtrov;
+        private System.Windows.Forms.TextBox textBoxRep;
+        private System.Windows.Forms.TextBox textBoxLet;
+        private System.Windows.Forms.TextBox textBoxOci;
+        private System.Windows.Forms.TextBox textBoxKandze;
+        private System.Windows.Forms.TextBox textBoxEktremiteti;
+        private System.Windows.Forms.TextBox textBoxGlava;
         private System.Windows.Forms.Label txtNaziv;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txtRep;
@@ -298,5 +340,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxTezina;
+        private System.Windows.Forms.TextBox textBoxDuzina;
+        private System.Windows.Forms.Button button1;
     }
 }

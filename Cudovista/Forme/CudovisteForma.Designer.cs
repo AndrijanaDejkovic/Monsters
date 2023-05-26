@@ -98,7 +98,8 @@
             // 
             // btnDodajCudoviste
             // 
-            this.btnDodajCudoviste.Location = new System.Drawing.Point(822, 117);
+            this.btnDodajCudoviste.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnDodajCudoviste.Location = new System.Drawing.Point(822, 93);
             this.btnDodajCudoviste.Name = "btnDodajCudoviste";
             this.btnDodajCudoviste.Size = new System.Drawing.Size(169, 60);
             this.btnDodajCudoviste.TabIndex = 0;
@@ -108,9 +109,10 @@
             // 
             // btnObrisi
             // 
+            this.btnObrisi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnObrisi.Location = new System.Drawing.Point(822, 183);
             this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(169, 46);
+            this.btnObrisi.Size = new System.Drawing.Size(175, 49);
             this.btnObrisi.TabIndex = 1;
             this.btnObrisi.Text = "Obrisi ";
             this.btnObrisi.UseVisualStyleBackColor = true;
@@ -118,9 +120,10 @@
             // 
             // btnIzmeni
             // 
+            this.btnIzmeni.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnIzmeni.Location = new System.Drawing.Point(822, 249);
             this.btnIzmeni.Name = "btnIzmeni";
-            this.btnIzmeni.Size = new System.Drawing.Size(169, 46);
+            this.btnIzmeni.Size = new System.Drawing.Size(175, 48);
             this.btnIzmeni.TabIndex = 2;
             this.btnIzmeni.Text = "Izmeni";
             this.btnIzmeni.UseVisualStyleBackColor = true;
@@ -128,9 +131,10 @@
             // 
             // btnSposobnost
             // 
+            this.btnSposobnost.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnSposobnost.Location = new System.Drawing.Point(787, 325);
             this.btnSposobnost.Name = "btnSposobnost";
-            this.btnSposobnost.Size = new System.Drawing.Size(243, 76);
+            this.btnSposobnost.Size = new System.Drawing.Size(243, 113);
             this.btnSposobnost.TabIndex = 3;
             this.btnSposobnost.Text = "Dodaj sposobnost cudovistu";
             this.btnSposobnost.UseVisualStyleBackColor = true;
@@ -138,9 +142,10 @@
             // 
             // btnIzlistaj
             // 
-            this.btnIzlistaj.Location = new System.Drawing.Point(787, 422);
+            this.btnIzlistaj.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnIzlistaj.Location = new System.Drawing.Point(787, 456);
             this.btnIzlistaj.Name = "btnIzlistaj";
-            this.btnIzlistaj.Size = new System.Drawing.Size(243, 44);
+            this.btnIzlistaj.Size = new System.Drawing.Size(243, 54);
             this.btnIzlistaj.TabIndex = 4;
             this.btnIzlistaj.Text = "Sposobnosti cudovista";
             this.btnIzlistaj.UseVisualStyleBackColor = true;

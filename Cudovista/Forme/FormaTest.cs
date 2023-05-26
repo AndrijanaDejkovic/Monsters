@@ -65,7 +65,7 @@ namespace Cudovista.Forme
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Legende p = s.Get<Cudovista.Entiteti.Legende>(1);
+                Cudovista.Entiteti.Legende p = s.Get<Cudovista.Entiteti.Legende>(2);
 
                 MessageBox.Show(p.Tekst);
 
@@ -84,7 +84,7 @@ namespace Cudovista.Forme
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Bajalice p = s.Get<Cudovista.Entiteti.Bajalice>(1);
+                Cudovista.Entiteti.Bajalice p = s.Get<Cudovista.Entiteti.Bajalice>(2);
 
                 MessageBox.Show(p.Bajalica);
 
@@ -122,7 +122,7 @@ namespace Cudovista.Forme
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Protivmere p = s.Get<Cudovista.Entiteti.Protivmere>(1);
+                Cudovista.Entiteti.Protivmere p = s.Get<Cudovista.Entiteti.Protivmere>(2);
 
                 MessageBox.Show(p.Naziv_protivmere);
 
@@ -160,7 +160,7 @@ namespace Cudovista.Forme
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Lovac p = s.Get<Cudovista.Entiteti.Lovac>(1);
+                Cudovista.Entiteti.Lovac p = s.Get<Cudovista.Entiteti.Lovac>(2);
 
                 MessageBox.Show(p.Ime_lovca);
 
@@ -179,7 +179,7 @@ namespace Cudovista.Forme
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Magijsko_cudoviste p = s.Get<Cudovista.Entiteti.Magijsko_cudoviste>(2);
+                Cudovista.Entiteti.Magijsko_cudoviste p = s.Get<Cudovista.Entiteti.Magijsko_cudoviste>(100);
 
                 MessageBox.Show(p.Naziv_cudovista);
 
@@ -198,7 +198,7 @@ namespace Cudovista.Forme
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                Cudovista.Entiteti.Materijal p = s.Get<Cudovista.Entiteti.Materijal>(2);
+                Cudovista.Entiteti.Materijal p = s.Get<Cudovista.Entiteti.Materijal>(5);
 
                 MessageBox.Show(p.GetType().ToString().Split('.').Last());
 
@@ -275,7 +275,7 @@ namespace Cudovista.Forme
                 ISession s = DataLayer.GetSession();
 
                 //Ucitavaju se podaci o prodavnici za zadatim brojem
-                var p = s.Get<Cudovista.Entiteti.Zivi_na>(1);
+                var p = s.Get<Cudovista.Entiteti.Zivi_na>(2);
 
                 MessageBox.Show(p.ID.ToString());
 

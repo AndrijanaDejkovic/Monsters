@@ -23,6 +23,7 @@ namespace Cudovista.Mapiranja
             Map(x => x.Da_li_ima_kandze).Column("DA_LI_IMA_KANDZE");
             Map(x => x.Broj_ociju).Column("BROJ_OCIJU");
             Map(x => x.Broj_ekstremiteta).Column("BROJ_EKSTREMITETA");
+            Map(x => x.Broj_glava).Column("BROJ_GLAVA");
             Map(x => x.Duzina).Column("DUZINA");
             Map(x => x.Tezina).Column("TEZINA");
 

@@ -942,13 +942,19 @@ namespace Cudovista
         public static List<MagijskeSposobnostiPregled> vratiSposobnostiMagijskogCudovista(int id)
         {
             MagijskoCudovisteBasic pb = new MagijskoCudovisteBasic();
-            List<MagijskeSposobnostiPregled> lista = new List<MagijskeSposobnostiPregled>();
+            List<MagijskeSposobnostiPregled> sposobnosti = new List<MagijskeSposobnostiPregled>();
             try
             {
                 ISession s = DataLayer.GetSession();
 
-                Cudovista.Entiteti.Magijsko_cudoviste o = s.Load<Cudovista.Entiteti.Magijsko_cudoviste>(id);
-                lista =o.Poseduje_sposobnosti as List<Cudovista.MagijskeSposobnostiPregled>;
+                Cudovista.Entiteti.Magijsko_cudoviste o = s.Get<Cudovista.Entiteti.Magijsko_cudoviste>(id);
+               
+                foreach (Magijske_sposobnosti m in o.Poseduje_sposobnosti)
+                {
+                    MagijskeSposobnostiPregled sposobnost= new MagijskeSposobnostiPregled(m.ID,m.Naziv_sposobnosti, m.Da_li_je_odbrambena, m.Opis_sposobnosti, m.Id_cudovista);
+                    sposobnosti.Add(sposobnost);
+                }
+
                 pb = new MagijskoCudovisteBasic(o.ID, o.Podtip, o.Naziv_cudovista, o.Vek, o.Da_li_postoji);
 
                 s.Close();
@@ -958,7 +964,7 @@ namespace Cudovista
                 //handle exceptions
             }
 
-            return lista;
+            return sposobnosti;
         }
 
         public static void obrisiMagijskoCudoviste(int id)
@@ -967,8 +973,12 @@ namespace Cudovista
             {
                 ISession s = DataLayer.GetSession();
 
-                Cudovista.Entiteti.Magijsko_cudoviste o = s.Load<Cudovista.Entiteti.Magijsko_cudoviste>(id);
-                o.Poseduje_sposobnosti.Clear();
+                Cudovista.Entiteti.Magijsko_cudoviste o = s.Get<Cudovista.Entiteti.Magijsko_cudoviste>(id);
+
+                foreach(Magijske_sposobnosti m in o.Poseduje_sposobnosti)
+                {
+                    s.Delete(m);
+                }
 
                 s.Delete(o);
                 s.Flush();
@@ -996,7 +1006,7 @@ namespace Cudovista
 
                 foreach (Cudovista.Entiteti.Nemagijsko_cudoviste p in svaCudovista)
                 {
-                    cudovista.Add(new NemagijskoCudovistePregled(p.ID, p.Da_li_zivi_u_vodi, p.Da_li_leti, p.Da_li_ima_rep, p.Da_li_je_otrovno, p.Da_li_ima_kandze, p.Broj_ociju, p.Broj_glava, p.Broj_ekstremiteta, p.Tezina, p.Duzina));
+                    cudovista.Add(new NemagijskoCudovistePregled(p.ID, p.Naziv_cudovista, p.Podtip, p.Vek, p.Da_li_zivi_u_vodi, p.Da_li_leti, p.Da_li_ima_rep, p.Da_li_je_otrovno, p.Da_li_ima_kandze, p.Broj_ociju, p.Broj_glava, p.Broj_ekstremiteta, p.Tezina, p.Duzina));
                 }
 
                 s.Close();
@@ -1017,7 +1027,10 @@ namespace Cudovista
 
                 Cudovista.Entiteti.Nemagijsko_cudoviste o = new Cudovista.Entiteti.Nemagijsko_cudoviste();
 
-                o.ID_Nemagijskog = p.ID_Nemagijskog;
+                o.ID = p.ID;
+                o.Naziv_cudovista = p.Naziv_cudovista;
+                o.Podtip = p.Podtip;
+                o.Vek = p.Vek;
                 o.Da_li_zivi_u_vodi = p.Da_li_zivi_u_vodi;
                 o.Da_li_leti = p.Da_li_leti;
                 o.Da_li_ima_rep = p.Da_li_ima_rep;
@@ -1029,7 +1042,7 @@ namespace Cudovista
                 o.Duzina = p.Duzina;
                 o.Tezina = p.Tezina;
 
-                s.SaveOrUpdate(o);
+                s.Save(o);
 
                 s.Flush();
 
@@ -1047,8 +1060,11 @@ namespace Cudovista
             {
                 ISession s = DataLayer.GetSession();
 
-                Cudovista.Entiteti.Nemagijsko_cudoviste o = s.Load<Cudovista.Entiteti.Nemagijsko_cudoviste>(p.ID_Nemagijskog);
-                o.ID_Nemagijskog = p.ID_Nemagijskog;
+                Cudovista.Entiteti.Nemagijsko_cudoviste o = s.Load<Cudovista.Entiteti.Nemagijsko_cudoviste>(p.ID);
+                o.ID = p.ID;
+                o.Naziv_cudovista = p.Naziv_cudovista;
+                o.Podtip = p.Podtip;
+                o.Vek = p.Vek;
                 o.Da_li_zivi_u_vodi = p.Da_li_zivi_u_vodi;
                 o.Da_li_leti = p.Da_li_leti;
                 o.Da_li_ima_rep = p.Da_li_ima_rep;

@@ -88,9 +88,10 @@
             // 
             // btnDodajSposobnost
             // 
+            this.btnDodajSposobnost.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnDodajSposobnost.Location = new System.Drawing.Point(331, 330);
             this.btnDodajSposobnost.Name = "btnDodajSposobnost";
-            this.btnDodajSposobnost.Size = new System.Drawing.Size(162, 64);
+            this.btnDodajSposobnost.Size = new System.Drawing.Size(215, 105);
             this.btnDodajSposobnost.TabIndex = 6;
             this.btnDodajSposobnost.Text = "Dodaj sposobnost";
             this.btnDodajSposobnost.UseVisualStyleBackColor = true;

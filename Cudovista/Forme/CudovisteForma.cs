@@ -116,7 +116,7 @@ namespace Cudovista.Forme
         {
             if (listaCudovista.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Izaberite cudoviste kom zelite da dodate sposobnost!");
+                MessageBox.Show("Izaberite cudoviste cije sposobnosti zelite da vidite!");
                 return;
             }
 

@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCudovista2 = new System.Windows.Forms.Button();
             this.btnTestiranje = new System.Windows.Forms.Button();
-            this.Predstavnici = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             // 
             this.btnCudovista2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCudovista2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCudovista2.Location = new System.Drawing.Point(110, 327);
+            this.btnCudovista2.Location = new System.Drawing.Point(110, 357);
             this.btnCudovista2.Name = "btnCudovista2";
             this.btnCudovista2.Size = new System.Drawing.Size(385, 115);
             this.btnCudovista2.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             this.btnTestiranje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnTestiranje.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTestiranje.Location = new System.Drawing.Point(110, 512);
+            this.btnTestiranje.Location = new System.Drawing.Point(110, 620);
             this.btnTestiranje.Name = "btnTestiranje";
             this.btnTestiranje.Size = new System.Drawing.Size(385, 45);
             this.btnTestiranje.TabIndex = 5;
@@ -82,23 +82,23 @@
             this.btnTestiranje.UseVisualStyleBackColor = false;
             this.btnTestiranje.Click += new System.EventHandler(this.btnTestiranje_Click);
             // 
-            // Predstavnici
+            // button2
             // 
-            this.Predstavnici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Predstavnici.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Predstavnici.Location = new System.Drawing.Point(110, 599);
-            this.Predstavnici.Name = "Predstavnici";
-            this.Predstavnici.Size = new System.Drawing.Size(385, 41);
-            this.Predstavnici.TabIndex = 7;
-            this.Predstavnici.Text = "Predstavnici";
-            this.Predstavnici.UseVisualStyleBackColor = false;
-            this.Predstavnici.Click += new System.EventHandler(this.Predstavnici_Click);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(119, 546);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(376, 53);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Nemagijska ";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(576, 767);
-            this.Controls.Add(this.Predstavnici);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnTestiranje);
             this.Controls.Add(this.btnCudovista2);
             this.Controls.Add(this.label2);
@@ -122,7 +122,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCudovista2;
         private System.Windows.Forms.Button btnTestiranje;
-        private System.Windows.Forms.Button Predstavnici;
+        private System.Windows.Forms.Button button2;
     }
 }
 
