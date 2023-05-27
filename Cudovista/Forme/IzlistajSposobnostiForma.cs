@@ -36,7 +36,7 @@ namespace Cudovista.Forme
         private void IzlistajSposobnostiForma_Load(object sender, EventArgs e)
         {
             popuni();
-            this.Text = $"AZURIRANJE CUDOVISTA {cudoviste.Naziv_cudovista.ToUpper()}";
+            this.Text = $"SPOSOBNOSTI CUDOVISTA {cudoviste.Naziv_cudovista.ToUpper()}";
         }
     }
 }

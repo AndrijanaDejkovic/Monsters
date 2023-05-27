@@ -71,7 +71,7 @@
             this.listaCudovista.TileSize = new System.Drawing.Size(320, 52);
             this.listaCudovista.UseCompatibleStateImageBehavior = false;
             this.listaCudovista.View = System.Windows.Forms.View.Details;
-            this.listaCudovista.SelectedIndexChanged += new System.EventHandler(this.btnObrisi_Click);
+            this.listaCudovista.SelectedIndexChanged += new System.EventHandler(this.Lista_Cudovista_Enter);
             // 
             // columnHeader1
             // 

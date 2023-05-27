@@ -80,6 +80,38 @@ namespace Cudovista.Forme
         {
             this.popuniPodacima();
         }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            if (listNemagijska.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite cudoviste koju zelite da obrisete!");
+                return;
+            }
+
+            int idCudovista = Int32.Parse(listNemagijska.SelectedItems[0].SubItems[0].Text);
+            string poruka = "Da li zelite da obrisete izabrano cudoviste?";
+            string title = "Pitanje";
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            DialogResult result = MessageBox.Show(poruka, title, buttons);
+
+            if (result == DialogResult.OK)
+            {
+                //DTOManager.obrisiCudoviste(idCudovista);
+                DTOManager.obrisiNemagijskoCudoviste(idCudovista);
+                MessageBox.Show("Brisanje cudovista je uspesno obavljeno!");
+                this.popuniPodacima();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void listNemagijska_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

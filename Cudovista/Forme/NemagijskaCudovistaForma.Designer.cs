@@ -41,12 +41,13 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnObrisi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DodajNemagijsko
             // 
-            this.DodajNemagijsko.Location = new System.Drawing.Point(590, 728);
-            this.DodajNemagijsko.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.DodajNemagijsko.Location = new System.Drawing.Point(345, 718);
+            this.DodajNemagijsko.Margin = new System.Windows.Forms.Padding(6);
             this.DodajNemagijsko.Name = "DodajNemagijsko";
             this.DodajNemagijsko.Size = new System.Drawing.Size(240, 107);
             this.DodajNemagijsko.TabIndex = 2;
@@ -75,39 +76,40 @@
             this.listNemagijska.TabIndex = 4;
             this.listNemagijska.UseCompatibleStateImageBehavior = false;
             this.listNemagijska.View = System.Windows.Forms.View.Details;
+            this.listNemagijska.SelectedIndexChanged += new System.EventHandler(this.listNemagijska_SelectedIndexChanged);
             // 
             // IME
             // 
-            this.IME.Text = "IME";
+            this.IME.Text = "ID";
             this.IME.Width = 74;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "PODTIP";
+            this.columnHeader2.Text = "IME";
             this.columnHeader2.Width = 109;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "VEK";
+            this.columnHeader3.Text = "PODTIP";
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "DA LI ZIVI U VODI";
+            this.columnHeader4.Text = "VEK";
             this.columnHeader4.Width = 175;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "DA LI IMA REP";
+            this.columnHeader5.Text = "DA LI ZIVI U VODI";
             this.columnHeader5.Width = 144;
             // 
             // OTROVNO
             // 
-            this.OTROVNO.Text = "OTROVNO";
+            this.OTROVNO.Text = "DA LI IMA REP";
             this.OTROVNO.Width = 129;
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "BR OCIJU";
+            this.columnHeader7.Text = "otrovno";
             this.columnHeader7.Width = 102;
             // 
             // columnHeader8
@@ -130,15 +132,26 @@
             this.columnHeader1.Text = "TEZINA";
             this.columnHeader1.Width = 481;
             // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(882, 718);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(224, 107);
+            this.btnObrisi.TabIndex = 5;
+            this.btnObrisi.Text = "Obrisi Nemagijsko";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
             // NemagijskaCudovistaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1434, 925);
+            this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.listNemagijska);
             this.Controls.Add(this.DodajNemagijsko);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "NemagijskaCudovistaForma";
             this.Text = "NemagijskaCudovistaForma";
             this.Load += new System.EventHandler(this.NemagijskaCudovistaForma_Load);
@@ -160,5 +173,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.Button btnObrisi;
     }
 }

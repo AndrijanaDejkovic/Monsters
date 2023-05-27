@@ -64,9 +64,9 @@
             this.btnCudovista2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCudovista2.Location = new System.Drawing.Point(110, 357);
             this.btnCudovista2.Name = "btnCudovista2";
-            this.btnCudovista2.Size = new System.Drawing.Size(385, 115);
+            this.btnCudovista2.Size = new System.Drawing.Size(385, 88);
             this.btnCudovista2.TabIndex = 2;
-            this.btnCudovista2.Text = " Cudovista";
+            this.btnCudovista2.Text = "Magijska";
             this.btnCudovista2.UseVisualStyleBackColor = false;
             this.btnCudovista2.Click += new System.EventHandler(this.btnCudovista2_Click);
             // 
@@ -74,7 +74,7 @@
             // 
             this.btnTestiranje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnTestiranje.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.btnTestiranje.Location = new System.Drawing.Point(110, 620);
+            this.btnTestiranje.Location = new System.Drawing.Point(110, 594);
             this.btnTestiranje.Name = "btnTestiranje";
             this.btnTestiranje.Size = new System.Drawing.Size(385, 45);
             this.btnTestiranje.TabIndex = 5;
@@ -86,9 +86,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(119, 546);
+            this.button2.Location = new System.Drawing.Point(110, 475);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(376, 53);
+            this.button2.Size = new System.Drawing.Size(385, 79);
             this.button2.TabIndex = 8;
             this.button2.Text = "Nemagijska ";
             this.button2.UseVisualStyleBackColor = false;
